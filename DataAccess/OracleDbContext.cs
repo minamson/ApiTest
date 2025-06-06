@@ -20,14 +20,15 @@ namespace DataAccess
 
             modelBuilder.Entity<Emp>();
             modelBuilder.Entity<Dept>();
-
+            modelBuilder.Entity<Schema>();
 
             Database.Log = sql => Debug.Write(sql);
         }
 
-
         //public DbSet<Emp> Emps { get; set; }
         //public DbSet<Dept> Depts { get; set; }
+        //public DbSet<Schema> Schemas { get; set; }
+
     }
 
 
