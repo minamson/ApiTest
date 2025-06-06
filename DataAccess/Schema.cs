@@ -20,28 +20,28 @@ namespace DataAccess
         public long Id { get; set; }
 
         [Column("TABLE_NAME")]
-        public string TableName { get; set; }
+        public string TABLE_NAME { get; set; }
+
+        [Column("KIND")]
+        public string KIND { get; set; }
 
         [Column("COLUMN_ID")]
-        public int ColumnId { get; set; }
+        public int? COLUMN_ID { get; set; }
 
         [Column("COLUMN_NAME")]
-        public string ColumnName { get; set; }
+        public string COLUMN_NAME { get; set; }
 
         [Column("COMMENTS")]
-        public string Comments { get; set; }
+        public string COMMENTS { get; set; }
 
         [Column("DATA_TYPE")]
-        public string DataType { get; set; }
-
-        //[Column("DATA_LENGTH")]
-        //public int DataLength { get; set; }
+        public string DATA_TYPE { get; set; }
 
         [Column("ISNULL")]
-        public string IsNull { get; set; }
+        public string ISNULL { get; set; }
 
         [Column("DATA_DEFAULT")]
-        public string DataDefault { get; set; }
+        public string DATA_DEFAULT { get; set; }
 
         [Column("PK")]
         public string PK { get; set; }
