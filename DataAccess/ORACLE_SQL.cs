@@ -12,24 +12,14 @@ namespace DataAccess
 
     public class ORACLE
     {
-        //private static string strCon = @"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))
-        //                            (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl))); User Id = system; Password = system123;";
+        public static string OraceDefaultSchema = "MINAM";
 
-        //string cn = string.Format(@"Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVICE_NAME = TESTDB))); User ID=MINAMSON; Password=thsalska;");
-
-
-        //public ConnectString(string host, uint port, string sid, string id, string pw) {
-        //    string cn = string.Format(@"Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)HOST = {1})(PORT = {2}}))(CONNECT_DATA = (SERVICE_NAME = {3}))); User ID={4};Password=thsalska;", host, port.ToString(), sid, id, pw);
-        //    this.OracleConnectString = cn;
-        //}
-
-
-        public static string OracleConnectString = @"Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVICE_NAME = COMPANYDB))); User ID=MINAM; Password=thsalska;";
-
+        public static string OracleConnectString = @"Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)
+                                                    (HOST = localhost)(PORT = 1521))
+                                                    (CONNECT_DATA = (SERVICE_NAME = COMPANYDB))); 
+                                                    User ID=MINAM; Password=thsalska;";
 
         public static string SchemInfo = @" 
-        
-
 
         SELECT  
          ROW_NUMBER() OVER(ORDER BY AA.TABLE_NAME, AA.COLUMN_ID) AS ID,    
@@ -51,9 +41,9 @@ namespace DataAccess
          AA.DATA_DEFAULT      AS DATA_DEFAULT,
          CC.PK                AS PK,
          CC.FK                AS FK,
-         CC.UK                AS UQ
+         CC.UQ                AS UQ
          
-    FROM ALL_TAB_COLUMNS AA,
+    FROM ALL_TAB_COLUMNS  AA,
          ALL_COL_COMMENTS BB,
          ALL_TAB_COMMENTS TC,
          (SELECT A.OWNER,
@@ -63,14 +53,14 @@ namespace DataAccess
                  POSITION,
                  CASE WHEN A.CONSTRAINT_TYPE = 'P' THEN 'Y' END AS PK,
                  CASE WHEN A.CONSTRAINT_TYPE = 'R' THEN 'Y' END AS FK,
-                 CASE WHEN A.CONSTRAINT_TYPE = 'U' THEN 'Y' END AS UK
+                 CASE WHEN A.CONSTRAINT_TYPE = 'U' THEN 'Y' END AS UQ
             FROM ALL_CONSTRAINTS A, ALL_CONS_COLUMNS B
-           WHERE   A.OWNER = b.OWNER
+           WHERE   A.OWNER = B.OWNER
                  AND A.TABLE_NAME = B.TABLE_NAME
                   AND A.CONSTRAINT_NAME = B.CONSTRAINT_NAME
                  AND A.CONSTRAINT_TYPE IN ('P', 'R','U')) CC
    WHERE 
-         AA.OWNER like 'MINAM'
+         AA.OWNER LIKE 'MINAM'
          AND AA.OWNER = BB.OWNER
          AND AA.TABLE_NAME = BB.TABLE_NAME
          AND AA.COLUMN_NAME = BB.COLUMN_NAME
@@ -82,13 +72,13 @@ namespace DataAccess
          AND AA.TABLE_NAME = CC.TABLE_NAME(+)
          AND AA.COLUMN_NAME = CC.COLUMN_NAME(+)
          
-         AND NVL(AA.TABLE_NAME,'NONE')  LIKE '%'||':PTNAME%'||'%'
-         AND NVL(TC.COMMENTS,'NONE') LIKE '%'||':PTCOMMENT'||'%'
+        -- AND NVL(AA.TABLE_NAME,'NONE')  LIKE '%'||':PTNAME%'||'%'
+        -- AND NVL(TC.COMMENTS,'NONE') LIKE '%'||':PTCOMMENT'||'%'
          
-         AND  NVL(AA.COLUMN_NAME,'NONE') LIKE '%'||':PCNAME%'||'%'
-         AND  NVL(BB.COMMENTS,'NONE') LIKE '%'||':PCCOMMENT'||'%'
+        -- AND  NVL(AA.COLUMN_NAME,'NONE') LIKE '%'||':PCNAME%'||'%'
+        -- AND  NVL(BB.COMMENTS,'NONE') LIKE '%'||':PCCOMMENT'||'%'
          
-        -- AND AA.TABLE_NAME != 'SCHEM_INFO' -- PREVENT SELF QUERY
+        -- AND AA.TABLE_NAME != 'SCHEM_INFO' 
 
 ORDER BY TABLE_NAME, COLUMN_ID, COLUMN_NAME
  

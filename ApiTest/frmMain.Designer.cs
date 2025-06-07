@@ -33,6 +33,7 @@
             this.gridViewSchemInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTableName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnKind = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnColumnId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnColomnName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnComments = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -80,6 +81,7 @@
             this.gridViewSchemInfo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumnID,
             this.gridColumnTableName,
+            this.gridColumnKind,
             this.gridColumnColumnId,
             this.gridColumnColomnName,
             this.gridColumnComments,
@@ -90,7 +92,7 @@
             this.gridColumnFK,
             this.gridColumnUQ});
             this.gridViewSchemInfo.GridControl = this.gridControlSchemInfo;
-            this.gridViewSchemInfo.GroupCount = 1;
+            this.gridViewSchemInfo.GroupCount = 2;
             this.gridViewSchemInfo.Name = "gridViewSchemInfo";
             this.gridViewSchemInfo.OptionsBehavior.ReadOnly = true;
             this.gridViewSchemInfo.OptionsSelection.CheckBoxSelectorColumnWidth = 25;
@@ -98,6 +100,7 @@
             this.gridViewSchemInfo.OptionsSelection.MultiSelect = true;
             this.gridViewSchemInfo.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridViewSchemInfo.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumnKind, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumnTableName, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumnID
@@ -118,6 +121,14 @@
             this.gridColumnTableName.Visible = true;
             this.gridColumnTableName.VisibleIndex = 1;
             this.gridColumnTableName.Width = 191;
+            // 
+            // gridColumnKind
+            // 
+            this.gridColumnKind.Caption = "Kind";
+            this.gridColumnKind.FieldName = "KIND";
+            this.gridColumnKind.Name = "gridColumnKind";
+            this.gridColumnKind.Visible = true;
+            this.gridColumnKind.VisibleIndex = 1;
             // 
             // gridColumnColumnId
             // 
@@ -278,6 +289,7 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditQryOption;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnDataDefault;
         private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnKind;
     }
 }
 

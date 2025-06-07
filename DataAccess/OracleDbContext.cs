@@ -16,7 +16,7 @@ namespace DataAccess
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 
-            modelBuilder.HasDefaultSchema("MINAM");
+            modelBuilder.HasDefaultSchema(ORACLE.OraceDefaultSchema);
 
             modelBuilder.Entity<Emp>();
             modelBuilder.Entity<Dept>();
