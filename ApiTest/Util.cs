@@ -20,15 +20,23 @@ namespace ApiTest
             (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));
         }
 
+
         public static void OpenChidView(Form parentForm, Form childForm)
         {
             childForm.Parent = parentForm;
             childForm.Show();
         }
 
-        public bool IsChildFormActivated(Form childForm)
-        {
-            return false;
-        }
+        //public void IsChildFormActivated(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer mainContainer)
+        //{
+        //    if (!mainContainer.Controls.Contains(CustomForms.ucSchemInfo.Instance))
+        //    {
+        //        mainContainer.Controls.Add(CustomForms.ucSchemInfo.Instance);
+        //        CustomForms.ucSchemInfo.Instance.Dock = DockStyle.Fill;
+        //        CustomForms.ucSchemInfo.Instance.BringToFront();
+        //    }
+
+        //    CustomForms.ucSchemInfo.Instance.BringToFront();
+        //}
     }
 }

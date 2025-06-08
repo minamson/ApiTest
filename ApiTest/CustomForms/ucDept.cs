@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
 using DataAccess;
 using DataAccess.Entity;
 using DataAccess.UnitOfWork;
-using DevExpress.XtraEditors;
 
 namespace ApiTest.CustomForms
 {
-    public partial class ucDept : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucDept : baseUserControl
     {
         private static ucDept _instatance;
 
@@ -31,22 +25,69 @@ namespace ApiTest.CustomForms
             }
         }
 
-
         public ucDept()
         {
             InitializeComponent();
         }
 
-        private void simpleButtonRetrieve_Click(object sender, EventArgs e)
-        {
-            using (var ctx = new OracleDbContext(ORACLE.OracleConnectString))
-            {
-                using (var uow = new UnitOfWork(ctx))
-                {
-                    var list = uow.Repository<Dept>().FindAll();
 
-                    gridControlDept.DataSource = list.ToList();
+
+        private void buttonRetrieve_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                splmWait.ShowWaitForm();
+                using (var ctx = new OracleDbContext(ORACLE.OracleConnectString))
+                {
+                    using (var uow = new UnitOfWork(ctx))
+                    {
+
+                        string name = textEditName.Text.Trim();
+                        var query = uow.Repository<Dept>().GetQuery();
+
+                        if (comboBoxEditSelection.SelectedIndex == 1)
+                        {
+                            gridControlDept.DataSource = uow.Repository<Dept>().FindBy(p => p.DeptName.Contains(name)).ToList();
+                        }
+                        else
+                            gridControlDept.DataSource = uow.Repository<Dept>().FindAll().ToList();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error", ex.Message);
+            }
+            finally
+            {
+                splmWait.CloseWaitForm();
+            }
+
+        }
+
+        private void gridViewDept_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        {
+            try
+            {
+                splmWait.ShowWaitForm();
+                using (var ctx = new OracleDbContext(ORACLE.OracleConnectString))
+                {
+                    using (var uow = new UnitOfWork(ctx))
+                    {
+                        var list = uow.Repository<Dept>().FindAll();
+
+                        gridControlDept.DataSource = list.ToList();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error", ex.Message);
+            }
+            finally
+            {
+                splmWait.CloseWaitForm();
             }
         }
     }

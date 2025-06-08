@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
@@ -112,6 +113,12 @@
     <Compile Include="CustomForms\baseUserControl.Designer.cs">
       <DependentUpon>baseUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomForms\ucEmpty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomForms\ucEmpty.Designer.cs">
+      <DependentUpon>ucEmpty.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomForms\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +154,9 @@
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="CustomForms\baseUserControl.resx">
       <DependentUpon>baseUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\ucEmpty.resx">
+      <DependentUpon>ucEmpty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomForms\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>

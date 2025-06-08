@@ -47,8 +47,8 @@
             this.gridColumnUQ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControlSchemInfo = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
@@ -85,9 +85,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEditQryOption.Properties.Items.AddRange(new object[] {
             "0.테이블이름",
-            "1.테이블 Comments",
-            "2.컬럼이름",
-            "3.컬럼 Comments"});
+            "1.컬럼이름",
+            "2.컬럼 Comments"});
             this.comboBoxEditQryOption.Size = new System.Drawing.Size(158, 24);
             this.comboBoxEditQryOption.TabIndex = 11;
             // 
@@ -118,6 +117,7 @@
             this.gridViewSchemInfo.GridControl = this.gridControlSchemInfo;
             this.gridViewSchemInfo.GroupCount = 2;
             this.gridViewSchemInfo.Name = "gridViewSchemInfo";
+            this.gridViewSchemInfo.OptionsBehavior.AutoExpandAllGroups = true;
             this.gridViewSchemInfo.OptionsBehavior.ReadOnly = true;
             this.gridViewSchemInfo.OptionsSelection.CheckBoxSelectorColumnWidth = 25;
             this.gridViewSchemInfo.OptionsSelection.InvertSelection = true;
@@ -153,7 +153,7 @@
             this.gridColumnKind.FieldName = "KIND";
             this.gridColumnKind.Name = "gridColumnKind";
             this.gridColumnKind.Visible = true;
-            this.gridColumnKind.VisibleIndex = 6;
+            this.gridColumnKind.VisibleIndex = 10;
             // 
             // gridColumnColumnId
             // 
@@ -267,27 +267,27 @@
             this.groupControl1.Size = new System.Drawing.Size(1499, 79);
             this.groupControl1.TabIndex = 13;
             // 
-            // buttonRetrieve
-            // 
-            this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRetrieve.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonRetrieve.ImageOptions.Image")));
-            this.buttonRetrieve.Location = new System.Drawing.Point(1211, 38);
-            this.buttonRetrieve.Name = "buttonRetrieve";
-            this.buttonRetrieve.Size = new System.Drawing.Size(149, 36);
-            this.buttonRetrieve.TabIndex = 10;
-            this.buttonRetrieve.Text = "Retrieve";
-            this.buttonRetrieve.Click += new System.EventHandler(this.buttonRetrieve_Click);
-            // 
             // simpleButtonExcel
             // 
             this.simpleButtonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButtonExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonExcel.ImageOptions.Image")));
-            this.simpleButtonExcel.Location = new System.Drawing.Point(1366, 38);
+            this.simpleButtonExcel.Location = new System.Drawing.Point(1258, 38);
             this.simpleButtonExcel.Name = "simpleButtonExcel";
             this.simpleButtonExcel.Size = new System.Drawing.Size(127, 36);
             this.simpleButtonExcel.TabIndex = 10;
             this.simpleButtonExcel.Text = "Export Excel";
             this.simpleButtonExcel.Click += new System.EventHandler(this.simpleButtonExcel_Click);
+            // 
+            // buttonRetrieve
+            // 
+            this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRetrieve.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonRetrieve.ImageOptions.Image")));
+            this.buttonRetrieve.Location = new System.Drawing.Point(1103, 38);
+            this.buttonRetrieve.Name = "buttonRetrieve";
+            this.buttonRetrieve.Size = new System.Drawing.Size(149, 36);
+            this.buttonRetrieve.TabIndex = 10;
+            this.buttonRetrieve.Text = "Retrieve";
+            this.buttonRetrieve.Click += new System.EventHandler(this.buttonRetrieve_Click);
             // 
             // ucSchemInfo
             // 

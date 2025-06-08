@@ -106,5 +106,10 @@ namespace ApiTest.CustomForms
                 MessageBox.Show(" error " + ex.Message, "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void simpleButtonClose_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
