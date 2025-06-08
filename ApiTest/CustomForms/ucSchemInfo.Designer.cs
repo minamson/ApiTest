@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSchemInfo));
             this.comboBoxEditSelection = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxEditQryOption = new DevExpress.XtraEditors.ComboBoxEdit();
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
-            this.buttonRetrieve = new System.Windows.Forms.Button();
             this.gridViewSchemInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTableName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -48,6 +47,8 @@
             this.gridColumnUQ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControlSchemInfo = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
@@ -56,18 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // simpleButtonExcel
-            // 
-            this.simpleButtonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonExcel.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.simpleButtonExcel.Appearance.Options.UseFont = true;
-            this.simpleButtonExcel.Location = new System.Drawing.Point(1321, 37);
-            this.simpleButtonExcel.Name = "simpleButtonExcel";
-            this.simpleButtonExcel.Size = new System.Drawing.Size(175, 28);
-            this.simpleButtonExcel.TabIndex = 12;
-            this.simpleButtonExcel.Text = "Excel";
-            this.simpleButtonExcel.Click += new System.EventHandler(this.simpleButtonExcel_Click);
             // 
             // comboBoxEditSelection
             // 
@@ -104,24 +93,12 @@
             // 
             // textEditName
             // 
-            this.textEditName.Location = new System.Drawing.Point(321, 37);
+            this.textEditName.Location = new System.Drawing.Point(321, 38);
             this.textEditName.Name = "textEditName";
             this.textEditName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.textEditName.Properties.Appearance.Options.UseFont = true;
             this.textEditName.Size = new System.Drawing.Size(151, 24);
             this.textEditName.TabIndex = 9;
-            // 
-            // buttonRetrieve
-            // 
-            this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRetrieve.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.buttonRetrieve.Location = new System.Drawing.Point(1129, 37);
-            this.buttonRetrieve.Name = "buttonRetrieve";
-            this.buttonRetrieve.Size = new System.Drawing.Size(176, 29);
-            this.buttonRetrieve.TabIndex = 7;
-            this.buttonRetrieve.Text = "Retrieve";
-            this.buttonRetrieve.UseVisualStyleBackColor = true;
-            this.buttonRetrieve.Click += new System.EventHandler(this.buttonRetrieve_Click);
             // 
             // gridViewSchemInfo
             // 
@@ -176,7 +153,7 @@
             this.gridColumnKind.FieldName = "KIND";
             this.gridColumnKind.Name = "gridColumnKind";
             this.gridColumnKind.Visible = true;
-            this.gridColumnKind.VisibleIndex = 5;
+            this.gridColumnKind.VisibleIndex = 6;
             // 
             // gridColumnColumnId
             // 
@@ -281,6 +258,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.simpleButtonExcel);
+            this.groupControl1.Controls.Add(this.buttonRetrieve);
             this.groupControl1.Controls.Add(this.textEditName);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
@@ -288,15 +267,35 @@
             this.groupControl1.Size = new System.Drawing.Size(1499, 79);
             this.groupControl1.TabIndex = 13;
             // 
+            // buttonRetrieve
+            // 
+            this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRetrieve.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonRetrieve.ImageOptions.Image")));
+            this.buttonRetrieve.Location = new System.Drawing.Point(1211, 38);
+            this.buttonRetrieve.Name = "buttonRetrieve";
+            this.buttonRetrieve.Size = new System.Drawing.Size(149, 36);
+            this.buttonRetrieve.TabIndex = 10;
+            this.buttonRetrieve.Text = "Retrieve";
+            this.buttonRetrieve.Click += new System.EventHandler(this.buttonRetrieve_Click);
+            // 
+            // simpleButtonExcel
+            // 
+            this.simpleButtonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonExcel.ImageOptions.Image")));
+            this.simpleButtonExcel.Location = new System.Drawing.Point(1366, 38);
+            this.simpleButtonExcel.Name = "simpleButtonExcel";
+            this.simpleButtonExcel.Size = new System.Drawing.Size(127, 36);
+            this.simpleButtonExcel.TabIndex = 10;
+            this.simpleButtonExcel.Text = "Export Excel";
+            this.simpleButtonExcel.Click += new System.EventHandler(this.simpleButtonExcel_Click);
+            // 
             // ucSchemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.simpleButtonExcel);
             this.Controls.Add(this.comboBoxEditSelection);
             this.Controls.Add(this.comboBoxEditQryOption);
             this.Controls.Add(this.gridControlSchemInfo);
-            this.Controls.Add(this.buttonRetrieve);
             this.Controls.Add(this.groupControl1);
             this.Name = "ucSchemInfo";
             this.Size = new System.Drawing.Size(1499, 655);
@@ -312,12 +311,9 @@
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditSelection;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditQryOption;
         private DevExpress.XtraEditors.TextEdit textEditName;
-        private System.Windows.Forms.Button buttonRetrieve;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewSchemInfo;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnID;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTableName;
@@ -333,5 +329,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnUQ;
         private DevExpress.XtraGrid.GridControl gridControlSchemInfo;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
+        private DevExpress.XtraEditors.SimpleButton buttonRetrieve;
     }
 }

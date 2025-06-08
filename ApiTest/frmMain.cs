@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using DataAccess;
+using DataAccess.Entity;
 using DataAccess.UnitOfWork;
 
 namespace ApiTest

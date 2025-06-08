@@ -5,6 +5,8 @@ using System.Linq;
 using System.Windows.Forms;
 using DataAccess;
 using DataAccess.UnitOfWork;
+using DataAccess.Entity;
+
 
 namespace ApiTest.CustomForms
 {
