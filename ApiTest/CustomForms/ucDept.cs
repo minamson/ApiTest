@@ -67,6 +67,8 @@ namespace ApiTest.CustomForms
 
         private void gridViewDept_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
+            Dept p = (Dept)gridViewDept.GetRow(e.RowHandle);
+
             try
             {
                 splmWait.ShowWaitForm();
@@ -74,9 +76,8 @@ namespace ApiTest.CustomForms
                 {
                     using (var uow = new UnitOfWork(ctx))
                     {
-                        var list = uow.Repository<Dept>().FindAll();
-
-                        gridControlDept.DataSource = list.ToList();
+                        uow.Repository<Dept>().Update(p);
+                        uow.Commit();
                     }
                 }
 
