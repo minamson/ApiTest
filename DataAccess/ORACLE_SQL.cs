@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Oracle.ManagedDataAccess.Client;
-
-namespace DataAccess
+﻿namespace DataAccess
 {
 
     public class ORACLE
@@ -18,6 +9,15 @@ namespace DataAccess
                                                     (HOST = localhost)(PORT = 1521))
                                                     (CONNECT_DATA = (SERVICE_NAME = COMPANYDB))); 
                                                     User ID=MINAM; Password=thsalska;";
+
+        public static string OracleConnection(string host, int port, string sid, string username, string password)
+        {
+
+            return string.Format( @"Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)
+                                                    (HOST = {0})(PORT = {1}))
+                                                    (CONNECT_DATA = (SERVICE_NAME = {2}))); 
+                                                    User ID={3}; Password={4};", host, port.ToString(),sid, username, password);
+        }
 
         public static string SchemInfo = @" 
 

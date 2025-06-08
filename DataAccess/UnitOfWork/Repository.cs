@@ -4,7 +4,9 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using DataAccess.UnitOfWork.Specification;
+using N.EntityFramework.Extensions;
 
 
 namespace DataAccess.UnitOfWork
@@ -34,14 +36,25 @@ namespace DataAccess.UnitOfWork
             return _context.Set<TEntity>().Count() > 0 ? true : false;
         }
 
+
         public TEntity FindByKey(object keyValue)
         {
             return _context.Set<TEntity>().Find(keyValue);
         }
 
+        public async Task<TEntity> FindAsync(object keyValue)
+        {
+            return await _context.Set<TEntity>().FindAsync(keyValue);
+        }
+
         public TEntity FindByKey(object[] keyValues)
         {
             return _context.Set<TEntity>().Find(keyValues);
+        }
+
+        public async Task<TEntity> FindByKeyAsync(object[] keyValues)
+        {
+            return await _context.Set<TEntity>().FindAsync(keyValues);
         }
 
         public IQueryable<TEntity> GetQuery()
@@ -150,6 +163,18 @@ namespace DataAccess.UnitOfWork
                 Add(item);
             }
         }
+
+
+        public void AddBulk(IEnumerable<TEntity> entities)
+        {
+            _context.BulkInsert(entities);
+        }
+
+        public void AddBulkAsync(IEnumerable<TEntity> entities)
+        {
+            _context.BulkInsertAsync(entities);
+        }
+
 
         public void Delete(TEntity entity)
         {

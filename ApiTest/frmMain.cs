@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
@@ -83,9 +84,10 @@ namespace ApiTest
 
         private void buttonRetrieve_Click(object sender, EventArgs e)
         {
-            using (var ctx = new OracleDbContext(ORACLE.OracleConnectString))
-            {
+            string cn = ORACLE.OracleConnection("localhost", 1521, "COMPANYDB","MINAM", "thsalska");
 
+            using (var ctx = new OracleDbContext(cn))
+            {
                 using (var uow = new UnitOfWork(ctx))
                 {
 
@@ -121,8 +123,20 @@ namespace ApiTest
                             query = uow.Repository<Schema>().FindBy(p => p.COLUMN_NAME.Contains(name));
                         else if (comboBoxEditQryOption.SelectedIndex == 2)
                             query = uow.Repository<Schema>().FindBy(p => p.COMMENTS.Contains(name));
+
+                        //if (comboBoxEditQryOption.SelectedIndex == 0)
+                        //    query.Where(p => p.TABLE_NAME.Contains(name));
+                        //else if (comboBoxEditQryOption.SelectedIndex == 1)
+                        //    query.Where(p => p.COLUMN_NAME.Contains(name));
+                        //else if (comboBoxEditQryOption.SelectedIndex == 2)
+                        //    query.Where(p => p.COMMENTS.Contains(name));
                     }
 
+                    if (comboBoxEditSelection.SelectedIndex == 1)
+                        query = query.Where(p => p.KIND == "TABLE");
+                    else if (comboBoxEditSelection.SelectedIndex == 2)
+                        query = query.Where(p => p.KIND == "VIEW");                    
+                    
                     gridControlSchemInfo.DataSource = query.ToList<Schema>();
                 }
             }
@@ -164,6 +178,23 @@ namespace ApiTest
         private void frmMain_Load(object sender, EventArgs e)
         {
             Util.CenterScreen(this);
+        }
+
+        private void comboBoxEditQryOption_EditValueChanged(object sender, EventArgs e)
+        {
+            if(comboBoxEditQryOption.Text.Trim().Length == 0)
+            {
+                comboBoxEditQryOption.Text = "0.테이블이름";
+            }
+
+        }
+
+        private void comboBoxEditSelection_EditValueChanged(object sender, EventArgs e)
+        {
+            if (comboBoxEditSelection.Text.Trim().Length == 0)
+            {
+                comboBoxEditSelection.Text = "0.All";
+            }
         }
     }
 }

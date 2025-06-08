@@ -1,4 +1,4 @@
-﻿namespace ApiTest
+﻿namespace ApiTest.CustomForms
 {
     partial class ucDept
     {

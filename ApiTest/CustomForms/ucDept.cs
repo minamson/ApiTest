@@ -12,7 +12,7 @@ using DataAccess.Entity;
 using DataAccess.UnitOfWork;
 using DevExpress.XtraEditors;
 
-namespace ApiTest
+namespace ApiTest.CustomForms
 {
     public partial class ucDept : DevExpress.XtraEditors.XtraUserControl
     {

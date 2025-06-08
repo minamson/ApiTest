@@ -106,11 +106,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FluentDesignForm1.cs">
+    <Compile Include="CustomForms\baseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomForms\baseUserControl.Designer.cs">
+      <DependentUpon>baseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomForms\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FluentDesignForm1.Designer.cs">
-      <DependentUpon>FluentDesignForm1.cs</DependentUpon>
+    <Compile Include="CustomForms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdmMain.cs">
       <SubType>Form</SubType>
@@ -126,15 +132,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucDept.cs">
+    <Compile Include="CustomForms\ucDept.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucDept.Designer.cs">
+    <Compile Include="CustomForms\ucDept.Designer.cs">
       <DependentUpon>ucDept.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomForms\ucSchemInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomForms\ucSchemInfo.Designer.cs">
+      <DependentUpon>ucSchemInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util.cs" />
-    <EmbeddedResource Include="FluentDesignForm1.resx">
-      <DependentUpon>FluentDesignForm1.cs</DependentUpon>
+    <EmbeddedResource Include="CustomForms\baseUserControl.resx">
+      <DependentUpon>baseUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmMain.resx">
       <DependentUpon>frmAdmMain.cs</DependentUpon>
@@ -152,8 +167,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ucDept.resx">
+    <EmbeddedResource Include="CustomForms\ucDept.resx">
       <DependentUpon>ucDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\ucSchemInfo.resx">
+      <DependentUpon>ucSchemInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>

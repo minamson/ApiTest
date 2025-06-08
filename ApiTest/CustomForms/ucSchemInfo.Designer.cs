@@ -1,16 +1,16 @@
-﻿namespace ApiTest
+﻿namespace ApiTest.CustomForms
 {
-    partial class frmMain
+    partial class ucSchemInfo
     {
-        /// <summary>
-        /// 필수 디자이너 변수입니다.
+        /// <summary> 
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// 사용 중인 모든 리소스를 정리합니다.
+        /// <summary> 
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,16 +20,19 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form 디자이너에서 생성한 코드
+        #region Component Designer generated code
 
-        /// <summary>
-        /// 디자이너 지원에 필요한 메서드입니다. 
-        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBoxEditSelection = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEditQryOption = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textEditName = new DevExpress.XtraEditors.TextEdit();
             this.buttonRetrieve = new System.Windows.Forms.Button();
-            this.gridControlSchemInfo = new DevExpress.XtraGrid.GridControl();
             this.gridViewSchemInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTableName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,40 +46,82 @@
             this.gridColumnPK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnFK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnUQ = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.textEditName = new DevExpress.XtraEditors.TextEdit();
-            this.comboBoxEditQryOption = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxEditSelection = new DevExpress.XtraEditors.ComboBoxEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSchemInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewSchemInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).BeginInit();
+            this.gridControlSchemInfo = new DevExpress.XtraGrid.GridControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewSchemInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSchemInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // simpleButtonExcel
+            // 
+            this.simpleButtonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonExcel.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.simpleButtonExcel.Appearance.Options.UseFont = true;
+            this.simpleButtonExcel.Location = new System.Drawing.Point(1321, 37);
+            this.simpleButtonExcel.Name = "simpleButtonExcel";
+            this.simpleButtonExcel.Size = new System.Drawing.Size(175, 28);
+            this.simpleButtonExcel.TabIndex = 12;
+            this.simpleButtonExcel.Text = "Excel";
+            this.simpleButtonExcel.Click += new System.EventHandler(this.simpleButtonExcel_Click);
+            // 
+            // comboBoxEditSelection
+            // 
+            this.comboBoxEditSelection.EditValue = "0.All";
+            this.comboBoxEditSelection.Location = new System.Drawing.Point(14, 37);
+            this.comboBoxEditSelection.Name = "comboBoxEditSelection";
+            this.comboBoxEditSelection.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxEditSelection.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEditSelection.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditSelection.Properties.Items.AddRange(new object[] {
+            "0.All",
+            "1. Only Table",
+            "2. Only View"});
+            this.comboBoxEditSelection.Size = new System.Drawing.Size(139, 24);
+            this.comboBoxEditSelection.TabIndex = 10;
+            // 
+            // comboBoxEditQryOption
+            // 
+            this.comboBoxEditQryOption.EditValue = "0.테이블이름";
+            this.comboBoxEditQryOption.Location = new System.Drawing.Point(159, 37);
+            this.comboBoxEditQryOption.Name = "comboBoxEditQryOption";
+            this.comboBoxEditQryOption.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxEditQryOption.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEditQryOption.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditQryOption.Properties.Items.AddRange(new object[] {
+            "0.테이블이름",
+            "1.테이블 Comments",
+            "2.컬럼이름",
+            "3.컬럼 Comments"});
+            this.comboBoxEditQryOption.Size = new System.Drawing.Size(158, 24);
+            this.comboBoxEditQryOption.TabIndex = 11;
+            // 
+            // textEditName
+            // 
+            this.textEditName.Location = new System.Drawing.Point(321, 37);
+            this.textEditName.Name = "textEditName";
+            this.textEditName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.textEditName.Properties.Appearance.Options.UseFont = true;
+            this.textEditName.Size = new System.Drawing.Size(151, 24);
+            this.textEditName.TabIndex = 9;
             // 
             // buttonRetrieve
             // 
             this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRetrieve.Location = new System.Drawing.Point(808, 12);
+            this.buttonRetrieve.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.buttonRetrieve.Location = new System.Drawing.Point(1129, 37);
             this.buttonRetrieve.Name = "buttonRetrieve";
             this.buttonRetrieve.Size = new System.Drawing.Size(176, 29);
-            this.buttonRetrieve.TabIndex = 0;
+            this.buttonRetrieve.TabIndex = 7;
             this.buttonRetrieve.Text = "Retrieve";
             this.buttonRetrieve.UseVisualStyleBackColor = true;
             this.buttonRetrieve.Click += new System.EventHandler(this.buttonRetrieve_Click);
-            // 
-            // gridControlSchemInfo
-            // 
-            this.gridControlSchemInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControlSchemInfo.Location = new System.Drawing.Point(1, 47);
-            this.gridControlSchemInfo.MainView = this.gridViewSchemInfo;
-            this.gridControlSchemInfo.Name = "gridControlSchemInfo";
-            this.gridControlSchemInfo.Size = new System.Drawing.Size(1181, 500);
-            this.gridControlSchemInfo.TabIndex = 1;
-            this.gridControlSchemInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewSchemInfo});
             // 
             // gridViewSchemInfo
             // 
@@ -122,7 +167,7 @@
             this.gridColumnTableName.FieldName = "TABLE_NAME";
             this.gridColumnTableName.Name = "gridColumnTableName";
             this.gridColumnTableName.Visible = true;
-            this.gridColumnTableName.VisibleIndex = 1;
+            this.gridColumnTableName.VisibleIndex = 2;
             this.gridColumnTableName.Width = 191;
             // 
             // gridColumnKind
@@ -131,7 +176,7 @@
             this.gridColumnKind.FieldName = "KIND";
             this.gridColumnKind.Name = "gridColumnKind";
             this.gridColumnKind.Visible = true;
-            this.gridColumnKind.VisibleIndex = 1;
+            this.gridColumnKind.VisibleIndex = 5;
             // 
             // gridColumnColumnId
             // 
@@ -220,98 +265,73 @@
             this.gridColumnUQ.VisibleIndex = 10;
             this.gridColumnUQ.Width = 50;
             // 
-            // textEditName
+            // gridControlSchemInfo
             // 
-            this.textEditName.Location = new System.Drawing.Point(294, 12);
-            this.textEditName.Name = "textEditName";
-            this.textEditName.Size = new System.Drawing.Size(151, 20);
-            this.textEditName.TabIndex = 3;
+            this.gridControlSchemInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControlSchemInfo.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.gridControlSchemInfo.Location = new System.Drawing.Point(3, 85);
+            this.gridControlSchemInfo.MainView = this.gridViewSchemInfo;
+            this.gridControlSchemInfo.Name = "gridControlSchemInfo";
+            this.gridControlSchemInfo.Size = new System.Drawing.Size(1493, 567);
+            this.gridControlSchemInfo.TabIndex = 8;
+            this.gridControlSchemInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewSchemInfo});
             // 
-            // comboBoxEditQryOption
+            // groupControl1
             // 
-            this.comboBoxEditQryOption.EditValue = "0.테이블이름";
-            this.comboBoxEditQryOption.Location = new System.Drawing.Point(177, 10);
-            this.comboBoxEditQryOption.Name = "comboBoxEditQryOption";
-            this.comboBoxEditQryOption.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditQryOption.Properties.Items.AddRange(new object[] {
-            "0.테이블이름",
-            "1.테이블 Comments",
-            "2.컬럼이름",
-            "3.컬럼 Comments"});
-            this.comboBoxEditQryOption.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEditQryOption.TabIndex = 5;
-            this.comboBoxEditQryOption.EditValueChanged += new System.EventHandler(this.comboBoxEditQryOption_EditValueChanged);
+            this.groupControl1.Controls.Add(this.textEditName);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(1499, 79);
+            this.groupControl1.TabIndex = 13;
             // 
-            // simpleButtonExcel
+            // ucSchemInfo
             // 
-            this.simpleButtonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonExcel.Location = new System.Drawing.Point(1000, 13);
-            this.simpleButtonExcel.Name = "simpleButtonExcel";
-            this.simpleButtonExcel.Size = new System.Drawing.Size(175, 28);
-            this.simpleButtonExcel.TabIndex = 6;
-            this.simpleButtonExcel.Text = "Excel";
-            this.simpleButtonExcel.Click += new System.EventHandler(this.simpleButtonExcel_Click);
-            // 
-            // comboBoxEditSelection
-            // 
-            this.comboBoxEditSelection.EditValue = "0.All";
-            this.comboBoxEditSelection.Location = new System.Drawing.Point(58, 12);
-            this.comboBoxEditSelection.Name = "comboBoxEditSelection";
-            this.comboBoxEditSelection.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditSelection.Properties.Items.AddRange(new object[] {
-            "0.All",
-            "1. Only Table",
-            "2. Only View"});
-            this.comboBoxEditSelection.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEditSelection.TabIndex = 5;
-            this.comboBoxEditSelection.EditValueChanged += new System.EventHandler(this.comboBoxEditSelection_EditValueChanged);
-            // 
-            // frmMain
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 548);
             this.Controls.Add(this.simpleButtonExcel);
             this.Controls.Add(this.comboBoxEditSelection);
             this.Controls.Add(this.comboBoxEditQryOption);
-            this.Controls.Add(this.textEditName);
             this.Controls.Add(this.gridControlSchemInfo);
             this.Controls.Add(this.buttonRetrieve);
-            this.Name = "frmMain";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSchemInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewSchemInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).EndInit();
+            this.Controls.Add(this.groupControl1);
+            this.Name = "ucSchemInfo";
+            this.Size = new System.Drawing.Size(1499, 655);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewSchemInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSchemInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditSelection;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditQryOption;
+        private DevExpress.XtraEditors.TextEdit textEditName;
         private System.Windows.Forms.Button buttonRetrieve;
-        private DevExpress.XtraGrid.GridControl gridControlSchemInfo;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewSchemInfo;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnID;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTableName;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnKind;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnColumnId;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnColomnName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnComments;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnDataType;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnDataDefault;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnIsNull;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnPK;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnFK;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnUQ;
-        private DevExpress.XtraEditors.TextEdit textEditName;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditQryOption;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnDataDefault;
-        private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnKind;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditSelection;
+        private DevExpress.XtraGrid.GridControl gridControlSchemInfo;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
     }
 }
-
