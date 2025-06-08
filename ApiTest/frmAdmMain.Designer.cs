@@ -35,16 +35,19 @@
             this.accordionControlElementDB = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accdMenuTableList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accdMenuDept = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barButtonClose = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barMdiChildrenListItem2 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barButtonItemClose = new DevExpress.XtraBars.BarButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentAdmContainer
@@ -59,7 +62,8 @@
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElementDB});
+            this.accordionControlElementDB,
+            this.accordionControlSeparator1});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
@@ -72,14 +76,18 @@
             // 
             this.accordionControlElementDB.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accdMenuTableList,
-            this.accdMenuDept,
-            this.accordionControlElement7});
+            this.accdMenuDept});
             this.accordionControlElementDB.Expanded = true;
             this.accordionControlElementDB.Name = "accordionControlElementDB";
-            this.accordionControlElementDB.Text = "Database Schema";
+            this.accordionControlElementDB.Text = "Database";
             // 
             // accdMenuTableList
             // 
+            this.accdMenuTableList.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl)});
             this.accdMenuTableList.Name = "accdMenuTableList";
             this.accdMenuTableList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accdMenuTableList.Text = "Table List";
@@ -92,12 +100,6 @@
             this.accdMenuDept.Text = "Dept CRUD";
             this.accdMenuDept.Click += new System.EventHandler(this.accdMenuDept_Click);
             // 
-            // accordionControlElement7
-            // 
-            this.accordionControlElement7.Name = "accordionControlElement7";
-            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "Element7";
-            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -105,10 +107,13 @@
             this.barMdiChildrenListItem1,
             this.barButtonClose,
             this.barMdiChildrenListItem2,
-            this.barButtonItemClose});
+            this.barButtonItemClose,
+            this.barEditItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+            this.fluentDesignFormControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemImageEdit1});
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(872, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
@@ -138,12 +143,12 @@
             // barButtonItemClose
             // 
             this.barButtonItemClose.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barButtonItemClose.Caption = "barButtonItem1";
+            this.barButtonItemClose.Caption = "Close";
             this.barButtonItemClose.Id = 3;
             this.barButtonItemClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemClose.ImageOptions.Image")));
             this.barButtonItemClose.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemClose.ImageOptions.LargeImage")));
-            this.barButtonItemClose.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.barButtonItemClose.Name = "barButtonItemClose";
+            this.barButtonItemClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItemClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemClose_ItemClick);
             // 
             // fluentFormDefaultManager1
@@ -153,8 +158,29 @@
             this.barMdiChildrenListItem1,
             this.barButtonClose,
             this.barMdiChildrenListItem2,
-            this.barButtonItemClose});
-            this.fluentFormDefaultManager1.MaxItemId = 4;
+            this.barButtonItemClose,
+            this.barEditItem1});
+            this.fluentFormDefaultManager1.MaxItemId = 5;
+            this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemImageEdit1});
+            // 
+            // accordionControlSeparator1
+            // 
+            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "barEditItem1";
+            this.barEditItem1.Edit = this.repositoryItemImageEdit1;
+            this.barEditItem1.Id = 4;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemImageEdit1
+            // 
+            this.repositoryItemImageEdit1.AutoHeight = false;
+            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
             // 
             // frmAdmMain
             // 
@@ -169,11 +195,13 @@
             this.Name = "frmAdmMain";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAdmMain";
+            this.Text = "API TEST";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,10 +214,12 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementDB;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accdMenuTableList;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accdMenuDept;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
         private DevExpress.XtraBars.BarDockingMenuItem barButtonClose;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItemClose;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
     }
 }

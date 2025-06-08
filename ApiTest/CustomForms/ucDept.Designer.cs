@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDept));
             this.gridControlDept = new DevExpress.XtraGrid.GridControl();
-            this.gridViewDept = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumnDeptNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnDeptName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnRemark = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
             this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.comboBoxEditSelection = new DevExpress.XtraEditors.ComboBoxEdit();
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumnDeptNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnDeptName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnRemark = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDept)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewDept)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControlDept
@@ -53,46 +53,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControlDept.Location = new System.Drawing.Point(3, 109);
-            this.gridControlDept.MainView = this.gridViewDept;
+            this.gridControlDept.MainView = this.gridView1;
             this.gridControlDept.Name = "gridControlDept";
             this.gridControlDept.Size = new System.Drawing.Size(1345, 500);
             this.gridControlDept.TabIndex = 1;
             this.gridControlDept.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewDept});
-            // 
-            // gridViewDept
-            // 
-            this.gridViewDept.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumnDeptNo,
-            this.gridColumnDeptName,
-            this.gridColumnRemark});
-            this.gridViewDept.GridControl = this.gridControlDept;
-            this.gridViewDept.Name = "gridViewDept";
-            this.gridViewDept.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewDept_RowUpdated);
-            // 
-            // gridColumnDeptNo
-            // 
-            this.gridColumnDeptNo.Caption = "DeptNo";
-            this.gridColumnDeptNo.FieldName = "DeptNo";
-            this.gridColumnDeptNo.Name = "gridColumnDeptNo";
-            this.gridColumnDeptNo.Visible = true;
-            this.gridColumnDeptNo.VisibleIndex = 0;
-            // 
-            // gridColumnDeptName
-            // 
-            this.gridColumnDeptName.Caption = "DeptName";
-            this.gridColumnDeptName.FieldName = "DeptName";
-            this.gridColumnDeptName.Name = "gridColumnDeptName";
-            this.gridColumnDeptName.Visible = true;
-            this.gridColumnDeptName.VisibleIndex = 1;
-            // 
-            // gridColumnRemark
-            // 
-            this.gridColumnRemark.Caption = "Remark";
-            this.gridColumnRemark.FieldName = "Remark";
-            this.gridColumnRemark.Name = "gridColumnRemark";
-            this.gridColumnRemark.Visible = true;
-            this.gridColumnRemark.VisibleIndex = 2;
+            this.gridView1});
             // 
             // simpleButtonExcel
             // 
@@ -151,6 +117,39 @@
             this.textEditName.Size = new System.Drawing.Size(151, 24);
             this.textEditName.TabIndex = 9;
             // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumnDeptNo,
+            this.gridColumnDeptName,
+            this.gridColumnRemark});
+            this.gridView1.GridControl = this.gridControlDept;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridColumnDeptNo
+            // 
+            this.gridColumnDeptNo.Caption = "DeptNo";
+            this.gridColumnDeptNo.FieldName = "DeptNo";
+            this.gridColumnDeptNo.Name = "gridColumnDeptNo";
+            this.gridColumnDeptNo.Visible = true;
+            this.gridColumnDeptNo.VisibleIndex = 0;
+            // 
+            // gridColumnDeptName
+            // 
+            this.gridColumnDeptName.Caption = "DeptName";
+            this.gridColumnDeptName.FieldName = "DeptName";
+            this.gridColumnDeptName.Name = "gridColumnDeptName";
+            this.gridColumnDeptName.Visible = true;
+            this.gridColumnDeptName.VisibleIndex = 1;
+            // 
+            // gridColumnRemark
+            // 
+            this.gridColumnRemark.Caption = "Remark";
+            this.gridColumnRemark.FieldName = "Remark";
+            this.gridColumnRemark.Name = "gridColumnRemark";
+            this.gridColumnRemark.Visible = true;
+            this.gridColumnRemark.VisibleIndex = 2;
+            // 
             // ucDept
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -160,25 +159,25 @@
             this.Name = "ucDept";
             this.Size = new System.Drawing.Size(1351, 626);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDept)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewDept)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private DevExpress.XtraGrid.GridControl gridControlDept;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewDept;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnDeptNo;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnDeptName;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnRemark;
         private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
         private DevExpress.XtraEditors.SimpleButton buttonRetrieve;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit textEditName;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditSelection;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnDeptNo;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnDeptName;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnRemark;
     }
 }
