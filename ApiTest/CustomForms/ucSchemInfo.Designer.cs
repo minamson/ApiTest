@@ -153,7 +153,7 @@
             this.gridColumnKind.FieldName = "KIND";
             this.gridColumnKind.Name = "gridColumnKind";
             this.gridColumnKind.Visible = true;
-            this.gridColumnKind.VisibleIndex = 10;
+            this.gridColumnKind.VisibleIndex = 11;
             // 
             // gridColumnColumnId
             // 
@@ -281,7 +281,6 @@
             // buttonRetrieve
             // 
             this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRetrieve.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonRetrieve.ImageOptions.Image")));
             this.buttonRetrieve.Location = new System.Drawing.Point(1103, 38);
             this.buttonRetrieve.Name = "buttonRetrieve";
             this.buttonRetrieve.Size = new System.Drawing.Size(149, 36);

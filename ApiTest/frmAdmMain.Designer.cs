@@ -35,19 +35,20 @@
             this.accordionControlElementDB = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accdMenuTableList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accdMenuDept = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barButtonClose = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barMdiChildrenListItem2 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barButtonItemClose = new DevExpress.XtraBars.BarButtonItem();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.barMdiChildrenListItem3 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentAdmContainer
@@ -100,6 +101,10 @@
             this.accdMenuDept.Text = "Dept CRUD";
             this.accdMenuDept.Click += new System.EventHandler(this.accdMenuDept_Click);
             // 
+            // accordionControlSeparator1
+            // 
+            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -108,7 +113,8 @@
             this.barButtonClose,
             this.barMdiChildrenListItem2,
             this.barButtonItemClose,
-            this.barEditItem1});
+            this.barEditItem1,
+            this.barMdiChildrenListItem3});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
@@ -151,23 +157,6 @@
             this.barButtonItemClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItemClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemClose_ItemClick);
             // 
-            // fluentFormDefaultManager1
-            // 
-            this.fluentFormDefaultManager1.Form = this;
-            this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barMdiChildrenListItem1,
-            this.barButtonClose,
-            this.barMdiChildrenListItem2,
-            this.barButtonItemClose,
-            this.barEditItem1});
-            this.fluentFormDefaultManager1.MaxItemId = 5;
-            this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemImageEdit1});
-            // 
-            // accordionControlSeparator1
-            // 
-            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
-            // 
             // barEditItem1
             // 
             this.barEditItem1.Caption = "barEditItem1";
@@ -181,6 +170,27 @@
             this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            // 
+            // fluentFormDefaultManager1
+            // 
+            this.fluentFormDefaultManager1.Form = this;
+            this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barMdiChildrenListItem1,
+            this.barButtonClose,
+            this.barMdiChildrenListItem2,
+            this.barButtonItemClose,
+            this.barEditItem1,
+            this.barMdiChildrenListItem3});
+            this.fluentFormDefaultManager1.MaxItemId = 6;
+            this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemImageEdit1});
+            // 
+            // barMdiChildrenListItem3
+            // 
+            this.barMdiChildrenListItem3.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barMdiChildrenListItem3.Caption = "barMdiChildrenListItem3";
+            this.barMdiChildrenListItem3.Id = 5;
+            this.barMdiChildrenListItem3.Name = "barMdiChildrenListItem3";
             // 
             // frmAdmMain
             // 
@@ -200,8 +210,8 @@
             this.Load += new System.EventHandler(this.frmAdmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +231,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
+        private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem3;
     }
 }

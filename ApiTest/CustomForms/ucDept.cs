@@ -43,12 +43,8 @@ namespace ApiTest.CustomForms
                     {
 
                         string name = textEditName.Text.Trim();
-                        var query = uow.Repository<Dept>().GetQuery();
-
-                        if (comboBoxEditSelection.SelectedIndex == 1)
-                        {
+                        if (name.Trim().Length > 0 && comboBoxEditSelection.SelectedIndex == 1)
                             gridControlDept.DataSource = uow.Repository<Dept>().FindBy(p => p.DeptName.Contains(name)).ToList();
-                        }
                         else
                             gridControlDept.DataSource = uow.Repository<Dept>().FindAll().ToList();
                     }

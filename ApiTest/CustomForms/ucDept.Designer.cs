@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDept));
             this.gridControlDept = new DevExpress.XtraGrid.GridControl();
             this.gridViewDept = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -107,7 +108,6 @@
             // buttonRetrieve
             // 
             this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRetrieve.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonRetrieve.ImageOptions.Image")));
             this.buttonRetrieve.Location = new System.Drawing.Point(955, 33);
             this.buttonRetrieve.Name = "buttonRetrieve";
             this.buttonRetrieve.Size = new System.Drawing.Size(149, 36);

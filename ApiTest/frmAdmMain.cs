@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 
@@ -22,6 +15,17 @@ namespace ApiTest
         {
             //Util.CenterScreen(this);
         }
+        private void barButtonItemClose_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!fluentAdmContainer.Controls.Contains(CustomForms.ucEmpty.Instance))
+            {
+                fluentAdmContainer.Controls.Add(CustomForms.ucEmpty.Instance);
+                CustomForms.ucEmpty.Instance.Dock = DockStyle.Fill;
+                CustomForms.ucEmpty.Instance.BringToFront();
+            }
+
+            CustomForms.ucEmpty.Instance.BringToFront();
+        }
 
         private void accdMenuTableList_Click(object sender, EventArgs e)
         {
@@ -35,17 +39,7 @@ namespace ApiTest
             CustomForms.ucSchemInfo.Instance.BringToFront();
         }
 
-        private void barButtonItemClose_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (!fluentAdmContainer.Controls.Contains(CustomForms.ucEmpty.Instance))
-            {
-                fluentAdmContainer.Controls.Add(CustomForms.ucEmpty.Instance);
-                CustomForms.ucEmpty.Instance.Dock = DockStyle.Fill;
-                CustomForms.ucEmpty.Instance.BringToFront();
-            }
 
-            CustomForms.ucEmpty.Instance.BringToFront();
-        }
 
         private void accdMenuDept_Click(object sender, EventArgs e)
         {
