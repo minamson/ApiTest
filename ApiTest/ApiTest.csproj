@@ -183,7 +183,7 @@
     <EmbeddedResource Include="CustomForms\ucSchemInfo.resx">
       <DependentUpon>ucSchemInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="lib\dll.zip" />
+    <None Include="lib\dll_lib.zip" />
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -209,6 +209,68 @@
       <Project>{23e11a81-28ff-4271-8a2f-887888435a5a}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Azure.Core.dll" />
+    <Content Include="lib\Azure.Identity.dll" />
+    <Content Include="lib\DataAccess.dll" />
+    <Content Include="lib\DevExpress.Data.Desktop.v22.2.dll" />
+    <Content Include="lib\DevExpress.Data.v22.2.dll" />
+    <Content Include="lib\DevExpress.Drawing.v22.2.dll" />
+    <Content Include="lib\DevExpress.Office.v22.2.Core.dll" />
+    <Content Include="lib\DevExpress.Pdf.v22.2.Core.dll" />
+    <Content Include="lib\DevExpress.Pdf.v22.2.Drawing.dll" />
+    <Content Include="lib\DevExpress.Printing.v22.2.Core.dll" />
+    <Content Include="lib\DevExpress.RichEdit.v22.2.Core.dll" />
+    <Content Include="lib\DevExpress.Sparkline.v22.2.Core.dll" />
+    <Content Include="lib\DevExpress.Utils.v22.2.dll" />
+    <Content Include="lib\DevExpress.XtraBars.v22.2.dll" />
+    <Content Include="lib\DevExpress.XtraEditors.v22.2.dll" />
+    <Content Include="lib\DevExpress.XtraGrid.v22.2.dll" />
+    <Content Include="lib\DevExpress.XtraLayout.v22.2.dll" />
+    <Content Include="lib\DevExpress.XtraNavBar.v22.2.dll" />
+    <Content Include="lib\DevExpress.XtraPrinting.v22.2.dll" />
+    <Content Include="lib\DevExpress.XtraTreeList.v22.2.dll" />
+    <Content Include="lib\EntityFramework.dll" />
+    <Content Include="lib\EntityFramework.SqlServer.dll" />
+    <Content Include="lib\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="lib\Microsoft.Bcl.TimeProvider.dll" />
+    <Content Include="lib\Microsoft.Data.SqlClient.dll" />
+    <Content Include="lib\Microsoft.Extensions.Caching.Abstractions.dll" />
+    <Content Include="lib\Microsoft.Extensions.Caching.Memory.dll" />
+    <Content Include="lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <Content Include="lib\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <Content Include="lib\Microsoft.Extensions.Options.dll" />
+    <Content Include="lib\Microsoft.Extensions.Primitives.dll" />
+    <Content Include="lib\Microsoft.Identity.Client.dll" />
+    <Content Include="lib\Microsoft.Identity.Client.Extensions.Msal.dll" />
+    <Content Include="lib\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="lib\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="lib\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="lib\Microsoft.IdentityModel.Protocols.dll" />
+    <Content Include="lib\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <Content Include="lib\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="lib\N.EntityFramework.Extensions.dll" />
+    <Content Include="lib\Oracle.ManagedDataAccess.dll" />
+    <Content Include="lib\Oracle.ManagedDataAccess.EntityFramework.dll" />
+    <Content Include="lib\System.Buffers.dll" />
+    <Content Include="lib\System.ClientModel.dll" />
+    <Content Include="lib\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="lib\System.Formats.Asn1.dll" />
+    <Content Include="lib\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="lib\System.IO.FileSystem.AccessControl.dll" />
+    <Content Include="lib\System.IO.Pipelines.dll" />
+    <Content Include="lib\System.Memory.Data.dll" />
+    <Content Include="lib\System.Memory.dll" />
+    <Content Include="lib\System.Numerics.Vectors.dll" />
+    <Content Include="lib\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="lib\System.Security.AccessControl.dll" />
+    <Content Include="lib\System.Security.Cryptography.ProtectedData.dll" />
+    <Content Include="lib\System.Security.Principal.Windows.dll" />
+    <Content Include="lib\System.Text.Encodings.Web.dll" />
+    <Content Include="lib\System.Text.Json.dll" />
+    <Content Include="lib\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="lib\System.ValueTuple.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
