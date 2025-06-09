@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using DevExpress.Utils;
+using Newtonsoft.Json;
 using RestSharp;
 
 namespace ApiTest
@@ -147,16 +150,51 @@ namespace ApiTest
             return client.ExecuteGet(request);
         }
 
-        public void IsChildFormActivated(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer mainContainer)
-        {
-            if (!mainContainer.Controls.Contains(CustomForms.ucSchemInfo.Instance))
-            {
-                mainContainer.Controls.Add(CustomForms.ucSchemInfo.Instance);
-                CustomForms.ucSchemInfo.Instance.Dock = DockStyle.Fill;
-                CustomForms.ucSchemInfo.Instance.BringToFront();
-            }
 
-            CustomForms.ucSchemInfo.Instance.BringToFront();
-        }
+        //사용법
+        //private void PrintedUpdate(List<Asts> printedAstsList)
+        //{
+        //    log.Debug(" ======== PrintedUpdate call begin =======");
+
+        //    EntityUpload entityUpload = new EntityUpload();
+
+        //    try
+        //    {
+
+        //        entityUpload.objects.astsList = printedAstsList;
+        //        entityUpload.objectCount = astsList.Count;
+        //        entityUpload.empty = false;
+        //        entityUpload.status = "success";
+        //        entityUpload.messageParams = "none";
+        //        entityUpload.serviceMessage = "print label";
+        //        entityUpload.messageKey = "";
+
+        //        var uploadJson = JsonConvert.SerializeObject(entityUpload);
+        //        log.Debug("printedAstsList uploadJson = " + uploadJson);
+
+        //        var response = CommonUtil.RestfulPost(this.PrintedUrl, uploadJson);
+        //        log.Debug("PrintedUrl = " + this.PrintedUrl);
+
+        //        if (response.StatusCode != System.Net.HttpStatusCode.OK)
+        //        {
+        //            log.Debug("PrintedUpdate error StatusCode=" + response.StatusCode);
+        //            //throw new Exception("");
+        //        }
+
+        //        log.Debug("PrintedUpdate StatusCode=" + response.StatusCode);
+
+        //        if (response.IsSuccessful)
+        //            log.Debug("PrintedUpdate OK" + response.Content);
+
+        //        log.Debug(" ======== PrintedUpdate call end  =======");
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        log.Error("PrintedUpdate Exception :" + ex.Message);
+        //        throw ex;
+        //    }
+
+        //}
     }
 }
