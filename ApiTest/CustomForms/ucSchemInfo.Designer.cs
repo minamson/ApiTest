@@ -35,6 +35,7 @@
             this.gridViewSchemInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTableName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnTABLE_COMMENT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnKind = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnColumnId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnColomnName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,6 +105,7 @@
             this.gridViewSchemInfo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumnID,
             this.gridColumnTableName,
+            this.gridColumnTABLE_COMMENT,
             this.gridColumnKind,
             this.gridColumnColumnId,
             this.gridColumnColomnName,
@@ -123,7 +125,6 @@
             this.gridViewSchemInfo.OptionsSelection.InvertSelection = true;
             this.gridViewSchemInfo.OptionsSelection.MultiSelect = true;
             this.gridViewSchemInfo.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gridViewSchemInfo.OptionsView.ShowGroupPanel = false;
             this.gridViewSchemInfo.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumnKind, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumnTableName, DevExpress.Data.ColumnSortOrder.Ascending)});
@@ -131,7 +132,7 @@
             // gridColumnID
             // 
             this.gridColumnID.Caption = "no";
-            this.gridColumnID.FieldName = "ID";
+            this.gridColumnID.FieldName = "Id";
             this.gridColumnID.Name = "gridColumnID";
             this.gridColumnID.OptionsColumn.FixedWidth = true;
             this.gridColumnID.Visible = true;
@@ -147,13 +148,22 @@
             this.gridColumnTableName.VisibleIndex = 2;
             this.gridColumnTableName.Width = 191;
             // 
+            // gridColumnTABLE_COMMENT
+            // 
+            this.gridColumnTABLE_COMMENT.Caption = "TABLE_COMMENT";
+            this.gridColumnTABLE_COMMENT.FieldName = "TABLE_COMMENT";
+            this.gridColumnTABLE_COMMENT.Name = "gridColumnTABLE_COMMENT";
+            this.gridColumnTABLE_COMMENT.Visible = true;
+            this.gridColumnTABLE_COMMENT.VisibleIndex = 2;
+            this.gridColumnTABLE_COMMENT.Width = 116;
+            // 
             // gridColumnKind
             // 
             this.gridColumnKind.Caption = "Kind";
             this.gridColumnKind.FieldName = "KIND";
             this.gridColumnKind.Name = "gridColumnKind";
             this.gridColumnKind.Visible = true;
-            this.gridColumnKind.VisibleIndex = 11;
+            this.gridColumnKind.VisibleIndex = 13;
             // 
             // gridColumnColumnId
             // 
@@ -162,7 +172,7 @@
             this.gridColumnColumnId.Name = "gridColumnColumnId";
             this.gridColumnColumnId.OptionsColumn.FixedWidth = true;
             this.gridColumnColumnId.Visible = true;
-            this.gridColumnColumnId.VisibleIndex = 2;
+            this.gridColumnColumnId.VisibleIndex = 3;
             this.gridColumnColumnId.Width = 60;
             // 
             // gridColumnColomnName
@@ -171,8 +181,8 @@
             this.gridColumnColomnName.FieldName = "COLUMN_NAME";
             this.gridColumnColomnName.Name = "gridColumnColomnName";
             this.gridColumnColomnName.Visible = true;
-            this.gridColumnColomnName.VisibleIndex = 3;
-            this.gridColumnColomnName.Width = 177;
+            this.gridColumnColomnName.VisibleIndex = 4;
+            this.gridColumnColomnName.Width = 242;
             // 
             // gridColumnComments
             // 
@@ -180,8 +190,8 @@
             this.gridColumnComments.FieldName = "COMMENTS";
             this.gridColumnComments.Name = "gridColumnComments";
             this.gridColumnComments.Visible = true;
-            this.gridColumnComments.VisibleIndex = 4;
-            this.gridColumnComments.Width = 216;
+            this.gridColumnComments.VisibleIndex = 5;
+            this.gridColumnComments.Width = 297;
             // 
             // gridColumnDataType
             // 
@@ -189,8 +199,8 @@
             this.gridColumnDataType.FieldName = "DATA_TYPE";
             this.gridColumnDataType.Name = "gridColumnDataType";
             this.gridColumnDataType.Visible = true;
-            this.gridColumnDataType.VisibleIndex = 5;
-            this.gridColumnDataType.Width = 234;
+            this.gridColumnDataType.VisibleIndex = 6;
+            this.gridColumnDataType.Width = 322;
             // 
             // gridColumnDataDefault
             // 
@@ -200,7 +210,8 @@
             this.gridColumnDataDefault.FieldName = "DATA_DEFAULT";
             this.gridColumnDataDefault.Name = "gridColumnDataDefault";
             this.gridColumnDataDefault.Visible = true;
-            this.gridColumnDataDefault.VisibleIndex = 6;
+            this.gridColumnDataDefault.VisibleIndex = 7;
+            this.gridColumnDataDefault.Width = 107;
             // 
             // gridColumnIsNull
             // 
@@ -209,7 +220,7 @@
             this.gridColumnIsNull.Name = "gridColumnIsNull";
             this.gridColumnIsNull.OptionsColumn.FixedWidth = true;
             this.gridColumnIsNull.Visible = true;
-            this.gridColumnIsNull.VisibleIndex = 7;
+            this.gridColumnIsNull.VisibleIndex = 8;
             this.gridColumnIsNull.Width = 100;
             // 
             // gridColumnPK
@@ -219,7 +230,7 @@
             this.gridColumnPK.Name = "gridColumnPK";
             this.gridColumnPK.OptionsColumn.FixedWidth = true;
             this.gridColumnPK.Visible = true;
-            this.gridColumnPK.VisibleIndex = 8;
+            this.gridColumnPK.VisibleIndex = 9;
             this.gridColumnPK.Width = 44;
             // 
             // gridColumnFK
@@ -229,7 +240,7 @@
             this.gridColumnFK.Name = "gridColumnFK";
             this.gridColumnFK.OptionsColumn.FixedWidth = true;
             this.gridColumnFK.Visible = true;
-            this.gridColumnFK.VisibleIndex = 9;
+            this.gridColumnFK.VisibleIndex = 10;
             this.gridColumnFK.Width = 39;
             // 
             // gridColumnUQ
@@ -239,7 +250,7 @@
             this.gridColumnUQ.Name = "gridColumnUQ";
             this.gridColumnUQ.OptionsColumn.FixedWidth = true;
             this.gridColumnUQ.Visible = true;
-            this.gridColumnUQ.VisibleIndex = 10;
+            this.gridColumnUQ.VisibleIndex = 11;
             this.gridColumnUQ.Width = 50;
             // 
             // gridControlSchemInfo
@@ -330,5 +341,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
         private DevExpress.XtraEditors.SimpleButton buttonRetrieve;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTABLE_COMMENT;
     }
 }

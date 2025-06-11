@@ -17,6 +17,9 @@ namespace DataAccess.Entity
         [Column("TABLE_NAME")]
         public string TABLE_NAME { get; set; }
 
+        [Column("TABLE_COMMENT")]
+        public string TABLE_COMMENT { get; set; }
+
         [Column("KIND")]
         public string KIND { get; set; }
 
