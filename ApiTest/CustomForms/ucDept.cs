@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using DataAccess;
 using DataAccess.Entity;
@@ -11,16 +11,16 @@ namespace ApiTest.CustomForms
     public partial class ucDept : baseUserControl
     {
         private static ucDept _instatance;
-
+        
         public static ucDept Instance
         {
             get
             {
-                if( _instatance == null)
+                if( _instatance == null || _instatance.IsDisposed)
                 {
                     _instatance = new ucDept();
                 }
-
+                
                 return _instatance;
             }
         }
@@ -41,7 +41,6 @@ namespace ApiTest.CustomForms
                 {
                     using (var uow = new UnitOfWork(ctx))
                     {
-
                         string name = textEditName.Text.Trim();
                         if (name.Trim().Length > 0 && comboBoxEditSelection.SelectedIndex == 1)
                             gridControlDept.DataSource = uow.Repository<Dept>().FindBy(p => p.DeptName.Contains(name)).ToList();
@@ -86,6 +85,12 @@ namespace ApiTest.CustomForms
             {
                 splmWait.CloseWaitForm();
             }
+        }
+
+        private void simpleButtonClose_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+            this.Dispose();
         }
     }
 }

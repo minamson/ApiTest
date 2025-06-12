@@ -18,11 +18,11 @@ namespace ApiTest.CustomForms
         {
             get
             {
-                if (_instatance == null)
+                if (_instatance == null || _instatance.IsDisposed)
                 {
                     _instatance = new ucSchemInfo();
                 }
-
+                _instatance.Visible = true;
                 return _instatance;
             }
         }
@@ -107,9 +107,11 @@ namespace ApiTest.CustomForms
             }
         }
 
+
         private void simpleButtonClose_Click(object sender, EventArgs e)
         {
-            
+            this.Parent.Controls.Remove(this);
+            this.Dispose();
         }
     }
 }

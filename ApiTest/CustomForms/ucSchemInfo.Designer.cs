@@ -48,6 +48,7 @@
             this.gridColumnUQ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControlSchemInfo = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButtonClose = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
             this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).BeginInit();
@@ -269,6 +270,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.simpleButtonClose);
             this.groupControl1.Controls.Add(this.simpleButtonExcel);
             this.groupControl1.Controls.Add(this.buttonRetrieve);
             this.groupControl1.Controls.Add(this.textEditName);
@@ -277,6 +279,16 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1499, 79);
             this.groupControl1.TabIndex = 13;
+            // 
+            // simpleButtonClose
+            // 
+            this.simpleButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonClose.Location = new System.Drawing.Point(1391, 38);
+            this.simpleButtonClose.Name = "simpleButtonClose";
+            this.simpleButtonClose.Size = new System.Drawing.Size(93, 36);
+            this.simpleButtonClose.TabIndex = 11;
+            this.simpleButtonClose.Text = "Close";
+            this.simpleButtonClose.Click += new System.EventHandler(this.simpleButtonClose_Click);
             // 
             // simpleButtonExcel
             // 
@@ -342,5 +354,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
         private DevExpress.XtraEditors.SimpleButton buttonRetrieve;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTABLE_COMMENT;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonClose;
     }
 }

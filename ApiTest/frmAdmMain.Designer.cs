@@ -43,8 +43,8 @@
             this.barButtonItemClose = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.barMdiChildrenListItem3 = new DevExpress.XtraBars.BarMdiChildrenListItem();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
@@ -123,7 +123,6 @@
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(872, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItemClose);
             // 
             // barMdiChildrenListItem1
             // 
@@ -131,13 +130,7 @@
             this.barMdiChildrenListItem1.Caption = "barMdiChildrenListItem1";
             this.barMdiChildrenListItem1.Id = 0;
             this.barMdiChildrenListItem1.Name = "barMdiChildrenListItem1";
-            // 
-            // barButtonClose
-            // 
-            this.barButtonClose.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barButtonClose.Caption = "Close";
-            this.barButtonClose.Id = 1;
-            this.barButtonClose.Name = "barButtonClose";
+
             // 
             // barMdiChildrenListItem2
             // 
@@ -145,17 +138,6 @@
             this.barMdiChildrenListItem2.Caption = "barMdiChildrenListItem2";
             this.barMdiChildrenListItem2.Id = 2;
             this.barMdiChildrenListItem2.Name = "barMdiChildrenListItem2";
-            // 
-            // barButtonItemClose
-            // 
-            this.barButtonItemClose.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barButtonItemClose.Caption = "Close";
-            this.barButtonItemClose.Id = 3;
-            this.barButtonItemClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemClose.ImageOptions.Image")));
-            this.barButtonItemClose.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemClose.ImageOptions.LargeImage")));
-            this.barButtonItemClose.Name = "barButtonItemClose";
-            this.barButtonItemClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonItemClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemClose_ItemClick);
             // 
             // barEditItem1
             // 
@@ -171,6 +153,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
             // 
+            // barMdiChildrenListItem3
+            // 
+            this.barMdiChildrenListItem3.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barMdiChildrenListItem3.Caption = "barMdiChildrenListItem3";
+            this.barMdiChildrenListItem3.Id = 5;
+            this.barMdiChildrenListItem3.Name = "barMdiChildrenListItem3";
+            // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.Form = this;
@@ -184,13 +173,6 @@
             this.fluentFormDefaultManager1.MaxItemId = 6;
             this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageEdit1});
-            // 
-            // barMdiChildrenListItem3
-            // 
-            this.barMdiChildrenListItem3.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barMdiChildrenListItem3.Caption = "barMdiChildrenListItem3";
-            this.barMdiChildrenListItem3.Id = 5;
-            this.barMdiChildrenListItem3.Name = "barMdiChildrenListItem3";
             // 
             // frmAdmMain
             // 
