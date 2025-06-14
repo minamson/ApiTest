@@ -3,16 +3,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Entity
 {
-    [Table("EMP")]
+    [Table("MM_EMP")]
     public class Emp
     {
         [Key]
         [Column("EMP_NO")]
-        public int EmpNo { get; set; }
+        public long EmpNo { get; set; }
         [Column("EMP_NAME")]
         public string EmpName { get; set; }
         [Column("DEPT_NO")]
-        public int DeptNo { get; set; }
+        public long DeptNo { get; set; }
         [Column("REMARK")]
         public string Remark { get; set; }
     }

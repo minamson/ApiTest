@@ -14,12 +14,32 @@
         {
 
             return string.Format( @"Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)
-                                                    (HOST = {0})(PORT = {1}))
-                                                    (CONNECT_DATA = (SERVICE_NAME = {2}))); 
-                                                    User ID={3}; Password={4};", host, port.ToString(),sid, username, password);
+                                                (HOST = {0})(PORT = {1}))
+                                                (CONNECT_DATA = (SERVICE_NAME = {2}))); 
+                                                User ID={3}; Password={4};", host, port.ToString(),sid, username, password);
         }
 
-        public static string SchemInfo = @" 
+
+        public static string BizModule = @"
+SELECT 
+    ROW_NUMBER() OVER(ORDER BY TABLE_NAME) AS Id,
+    SUBSTR(TABLE_NAME,0,2 ) as Module
+FROM ALL_TABLES
+WHERE OWNER = 'MINAM'
+";
+
+
+        public static string FuelPrice = @"
+SELECT
+    ROW_NUMBER() OVER(ORDER BY DAY) AS Id,
+    day as  Day,
+    days as  Days,
+    price as Price
+FROM FUEL_PRICE 
+ORDER BY Days
+";
+
+        public static string SchemInfo = @"
 
         SELECT  
          ROW_NUMBER() OVER(ORDER BY AA.TABLE_NAME, AA.COLUMN_ID) AS ID,    

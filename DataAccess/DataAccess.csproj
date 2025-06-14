@@ -203,6 +203,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\BizModule.cs" />
+    <Compile Include="Entity\FuelPrice.cs" />
     <Compile Include="ORACLE_SQL.cs" />
     <Compile Include="Entity\Dept.cs" />
     <Compile Include="Entity\Emp.cs" />

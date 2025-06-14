@@ -31,7 +31,6 @@ namespace ApiTest.CustomForms
         }
 
 
-
         private void buttonRetrieve_Click(object sender, EventArgs e)
         {
             try

@@ -19,6 +19,7 @@ namespace DataAccess
             modelBuilder.Entity<Emp>();
             modelBuilder.Entity<Dept>();
             modelBuilder.Entity<Schema>();
+            modelBuilder.Entity<BizModule>();
         }
 
         //public DbSet<Emp> Emps { get; set; }

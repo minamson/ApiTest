@@ -41,5 +41,29 @@ namespace ApiTest
 
             CustomForms.ucDept.Instance.BringToFront();
         }
+
+        private void accordionControlElementEmp_Click(object sender, EventArgs e)
+        {
+            if (!fluentAdmContainer.Controls.Contains(CustomForms.ucEmp.Instance))
+            {
+                fluentAdmContainer.Controls.Add(CustomForms.ucEmp.Instance);
+                CustomForms.ucEmp.Instance.Dock = DockStyle.Fill;
+                CustomForms.ucEmp.Instance.BringToFront();
+            }
+
+            CustomForms.ucEmp.Instance.BringToFront();
+        }
+
+        private void accordionControlElementFuelPrice_Click(object sender, EventArgs e)
+        {
+            if (!fluentAdmContainer.Controls.Contains(CustomForms.ucFuelPrice.Instance))
+            {
+                fluentAdmContainer.Controls.Add(CustomForms.ucFuelPrice.Instance);
+                CustomForms.ucFuelPrice.Instance.Dock = DockStyle.Fill;
+                CustomForms.ucFuelPrice.Instance.BringToFront();
+            }
+
+            CustomForms.ucFuelPrice.Instance.BringToFront();
+        }
     }
 }

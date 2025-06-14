@@ -49,6 +49,7 @@
             this.gridControlSchemInfo = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButtonClose = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBoxEditBizModule = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
             this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).BeginInit();
@@ -58,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSchemInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditBizModule.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxEditSelection
@@ -271,6 +273,7 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.simpleButtonClose);
+            this.groupControl1.Controls.Add(this.comboBoxEditBizModule);
             this.groupControl1.Controls.Add(this.simpleButtonExcel);
             this.groupControl1.Controls.Add(this.buttonRetrieve);
             this.groupControl1.Controls.Add(this.textEditName);
@@ -289,6 +292,18 @@
             this.simpleButtonClose.TabIndex = 11;
             this.simpleButtonClose.Text = "Close";
             this.simpleButtonClose.Click += new System.EventHandler(this.simpleButtonClose_Click);
+            // 
+            // comboBoxEditBizModule
+            // 
+            this.comboBoxEditBizModule.EditValue = "";
+            this.comboBoxEditBizModule.Location = new System.Drawing.Point(505, 38);
+            this.comboBoxEditBizModule.Name = "comboBoxEditBizModule";
+            this.comboBoxEditBizModule.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxEditBizModule.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEditBizModule.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditBizModule.Size = new System.Drawing.Size(158, 24);
+            this.comboBoxEditBizModule.TabIndex = 11;
             // 
             // simpleButtonExcel
             // 
@@ -321,6 +336,7 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "ucSchemInfo";
             this.Size = new System.Drawing.Size(1499, 655);
+            this.Load += new System.EventHandler(this.ucSchemInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
@@ -328,6 +344,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSchemInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditBizModule.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,5 +372,6 @@
         private DevExpress.XtraEditors.SimpleButton buttonRetrieve;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTABLE_COMMENT;
         private DevExpress.XtraEditors.SimpleButton simpleButtonClose;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditBizModule;
     }
 }

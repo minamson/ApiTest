@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmMain));
             this.fluentAdmContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElementDB = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accdMenuTableList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accdMenuDept = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementEmp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
@@ -45,6 +45,7 @@
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.barMdiChildrenListItem3 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.accordionControlElementFuelPrice = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
@@ -77,7 +78,9 @@
             // 
             this.accordionControlElementDB.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accdMenuTableList,
-            this.accdMenuDept});
+            this.accdMenuDept,
+            this.accordionControlElementEmp,
+            this.accordionControlElementFuelPrice});
             this.accordionControlElementDB.Expanded = true;
             this.accordionControlElementDB.Name = "accordionControlElementDB";
             this.accordionControlElementDB.Text = "Database";
@@ -100,6 +103,13 @@
             this.accdMenuDept.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accdMenuDept.Text = "Dept CRUD";
             this.accdMenuDept.Click += new System.EventHandler(this.accdMenuDept_Click);
+            // 
+            // accordionControlElementEmp
+            // 
+            this.accordionControlElementEmp.Name = "accordionControlElementEmp";
+            this.accordionControlElementEmp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementEmp.Text = "Emp CRUD";
+            this.accordionControlElementEmp.Click += new System.EventHandler(this.accordionControlElementEmp_Click);
             // 
             // accordionControlSeparator1
             // 
@@ -130,7 +140,11 @@
             this.barMdiChildrenListItem1.Caption = "barMdiChildrenListItem1";
             this.barMdiChildrenListItem1.Id = 0;
             this.barMdiChildrenListItem1.Name = "barMdiChildrenListItem1";
-
+            // 
+            // barButtonClose
+            // 
+            this.barButtonClose.Id = 6;
+            this.barButtonClose.Name = "barButtonClose";
             // 
             // barMdiChildrenListItem2
             // 
@@ -138,6 +152,11 @@
             this.barMdiChildrenListItem2.Caption = "barMdiChildrenListItem2";
             this.barMdiChildrenListItem2.Id = 2;
             this.barMdiChildrenListItem2.Name = "barMdiChildrenListItem2";
+            // 
+            // barButtonItemClose
+            // 
+            this.barButtonItemClose.Id = 7;
+            this.barButtonItemClose.Name = "barButtonItemClose";
             // 
             // barEditItem1
             // 
@@ -170,9 +189,16 @@
             this.barButtonItemClose,
             this.barEditItem1,
             this.barMdiChildrenListItem3});
-            this.fluentFormDefaultManager1.MaxItemId = 6;
+            this.fluentFormDefaultManager1.MaxItemId = 8;
             this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageEdit1});
+            // 
+            // accordionControlElementFuelPrice
+            // 
+            this.accordionControlElementFuelPrice.Name = "accordionControlElementFuelPrice";
+            this.accordionControlElementFuelPrice.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementFuelPrice.Text = "Fuel Price";
+            this.accordionControlElementFuelPrice.Click += new System.EventHandler(this.accordionControlElementFuelPrice_Click);
             // 
             // frmAdmMain
             // 
@@ -214,5 +240,7 @@
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem3;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementEmp;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementFuelPrice;
     }
 }

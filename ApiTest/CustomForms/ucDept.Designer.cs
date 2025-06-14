@@ -37,9 +37,9 @@
             this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
             this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButtonClose = new DevExpress.XtraEditors.SimpleButton();
             this.comboBoxEditSelection = new DevExpress.XtraEditors.ComboBoxEdit();
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButtonClose = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDept)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDept)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -128,6 +128,16 @@
             this.groupControl1.Size = new System.Drawing.Size(1351, 79);
             this.groupControl1.TabIndex = 14;
             // 
+            // simpleButtonClose
+            // 
+            this.simpleButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonClose.Location = new System.Drawing.Point(1243, 33);
+            this.simpleButtonClose.Name = "simpleButtonClose";
+            this.simpleButtonClose.Size = new System.Drawing.Size(93, 36);
+            this.simpleButtonClose.TabIndex = 15;
+            this.simpleButtonClose.Text = "Close";
+            this.simpleButtonClose.Click += new System.EventHandler(this.simpleButtonClose_Click);
+            // 
             // comboBoxEditSelection
             // 
             this.comboBoxEditSelection.EditValue = "0.All";
@@ -151,16 +161,6 @@
             this.textEditName.Properties.Appearance.Options.UseFont = true;
             this.textEditName.Size = new System.Drawing.Size(151, 24);
             this.textEditName.TabIndex = 9;
-            // 
-            // simpleButtonClose
-            // 
-            this.simpleButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonClose.Location = new System.Drawing.Point(1243, 33);
-            this.simpleButtonClose.Name = "simpleButtonClose";
-            this.simpleButtonClose.Size = new System.Drawing.Size(93, 36);
-            this.simpleButtonClose.TabIndex = 15;
-            this.simpleButtonClose.Text = "Close";
-            this.simpleButtonClose.Click += new System.EventHandler(this.simpleButtonClose_Click);
             // 
             // ucDept
             // 

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DataAccess.Entity
 {
 
-    [Table("DEPT")]
+    [Table("SD_DEPT")]
     public class Dept
     {
         [Key]
