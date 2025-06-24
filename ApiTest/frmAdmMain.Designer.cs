@@ -35,6 +35,8 @@
             this.accdMenuTableList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accdMenuDept = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementEmp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementFuelPrice = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
@@ -45,7 +47,6 @@
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.barMdiChildrenListItem3 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.accordionControlElementFuelPrice = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
@@ -80,7 +81,8 @@
             this.accdMenuTableList,
             this.accdMenuDept,
             this.accordionControlElementEmp,
-            this.accordionControlElementFuelPrice});
+            this.accordionControlElementFuelPrice,
+            this.accordionControlElementReport});
             this.accordionControlElementDB.Expanded = true;
             this.accordionControlElementDB.Name = "accordionControlElementDB";
             this.accordionControlElementDB.Text = "Database";
@@ -110,6 +112,20 @@
             this.accordionControlElementEmp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementEmp.Text = "Emp CRUD";
             this.accordionControlElementEmp.Click += new System.EventHandler(this.accordionControlElementEmp_Click);
+            // 
+            // accordionControlElementFuelPrice
+            // 
+            this.accordionControlElementFuelPrice.Name = "accordionControlElementFuelPrice";
+            this.accordionControlElementFuelPrice.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementFuelPrice.Text = "Fuel Price";
+            this.accordionControlElementFuelPrice.Click += new System.EventHandler(this.accordionControlElementFuelPrice_Click);
+            // 
+            // accordionControlElementReport
+            // 
+            this.accordionControlElementReport.Name = "accordionControlElementReport";
+            this.accordionControlElementReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementReport.Text = "Report";
+            this.accordionControlElementReport.Click += new System.EventHandler(this.accordionControlElementReport_Click);
             // 
             // accordionControlSeparator1
             // 
@@ -193,13 +209,6 @@
             this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageEdit1});
             // 
-            // accordionControlElementFuelPrice
-            // 
-            this.accordionControlElementFuelPrice.Name = "accordionControlElementFuelPrice";
-            this.accordionControlElementFuelPrice.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElementFuelPrice.Text = "Fuel Price";
-            this.accordionControlElementFuelPrice.Click += new System.EventHandler(this.accordionControlElementFuelPrice_Click);
-            // 
             // frmAdmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -242,5 +251,6 @@
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem3;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementEmp;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementFuelPrice;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementReport;
     }
 }

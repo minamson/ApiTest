@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using DataAccess;
 using DataAccess.Entity;
 using DataAccess.UnitOfWork;
-using DataAccess.UnitOfWork.Specification;
-using DevExpress.Utils.Extensions;
-using DevExpress.Xpo.DB.Helpers;
-using IDataAccess.UnitOfWork.Specification;
 
 
 namespace ApiTest.CustomForms
@@ -38,17 +32,7 @@ namespace ApiTest.CustomForms
             InitializeComponent();
         }
 
-        private void BizModule()
-        {
-            //List<BizModule> list = new List<BizModule>();
-            //var list = new List<string>();
 
-            using (var ctx = new OracleDbContext(ORACLE.OracleConnectString))
-            {
-                var list = ctx.Database.SqlQuery<BizModule>(ORACLE.BizModule).ToList<BizModule>().Select(s => s.Module).ToList();;
-                comboBoxEditBizModule.Properties.Items.AddRange(list);
-            }
-        }
         private void buttonRetrieve_Click(object sender, EventArgs e)
         {
             try
@@ -58,17 +42,16 @@ namespace ApiTest.CustomForms
                 {
                     using (var uow = new UnitOfWork(ctx))
                     {
-                        var sp1 = new Specification<Schema>(p => p.TABLE_NAME.StartsWith(textEditName.Text.Trim()));
-                        var sp2 = new Specification<Schema>(p => p.TABLE_COMMENT.StartsWith(textEditName.Text.Trim()));
-                        var sp3 = new Specification<Schema>(p => p.COLUMN_NAME .StartsWith(textEditName.Text.Trim()));
+                        //var sp1 = new Specification<Schema>(p => p.TABLE_NAME.StartsWith(textEditName.Text.Trim()));
+                        //var sp2 = new Specification<Schema>(p => p.COLUMN_NAME.StartsWith(textEditName.Text.Trim()));
+                        //var sp3 = new Specification<Schema>(p => p.COMMENTS.StartsWith(textEditName.Text.Trim()));
 
-                        //    Specification<Parent> specification2 = new Specification<Parent>(p => p.Age >= 0);
-                        //    Specification<Parent> specification3 = new Specification<Parent>(p => !(p.Age >= 0));
-                        //var list = uow.Repository<Parent>().FindBy(
-                        //            specification.
-                        //                And(specification).
-                        //                    Or(specification2));
-                        //parentBindingSource.DataSource = list.ToList();
+                        //var list = uow.Repository<Schema>().FindBy(
+                        //            sp1.
+                        //                And(sp2).
+                        //                    Or(sp3));
+
+                        //gridControlSchemInfo.DataSource = list.ToList();
 
                         string name = textEditName.Text.ToUpper().Trim();
                         var query = uow.Repository<Schema>().GetQuery();
@@ -88,10 +71,10 @@ namespace ApiTest.CustomForms
                         else if (comboBoxEditSelection.SelectedIndex == 2)
                              query.Where(p => p.KIND == "VIEW");
 
-                        if (comboBoxEditBizModule.Text.Length != 0)
-                            query = query.Where(p => p.TABLE_NAME.StartsWith(comboBoxEditBizModule.Text.Trim()));
+                        //if (comboBoxEditBizModule.Text.Length != 0)
+                        //    query = query.Where(p => p.TABLE_NAME.StartsWith(comboBoxEditBizModule.Text.Trim()));
 
-                        gridControlSchemInfo.DataSource = query.ToList<Schema>();
+                        gridControlSchemInfo.DataSource = query.ToList();
                     }
                 }
             }
@@ -145,9 +128,5 @@ namespace ApiTest.CustomForms
             this.Dispose();
         }
 
-        private void ucSchemInfo_Load(object sender, EventArgs e)
-        {
-            BizModule();
-        }
     }
 }

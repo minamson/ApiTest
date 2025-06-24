@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using DataAccess.Entity;
 using DataAccess.UnitOfWork;
-using DevExpress.Data.ChartDataSources;
-using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.BandedGrid;
 using DevExpress.XtraPivotGrid;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ApiTest.CustomForms
 {
@@ -72,13 +63,76 @@ namespace ApiTest.CustomForms
         {
             MessageBox.Show(e.DataField.ToString(), "e.DataField");
             MessageBox.Show(e.ColumnField.Name, "e.ColumnField");
+            MessageBox.Show(e.Value.ToString(),"col value");
+
             MessageBox.Show(e.ColumnFieldIndex.ToString(), "e.ColumnFieldIndex");
             MessageBox.Show(e.Editor.EditValue.ToString(), "Editor.EditValue");
+            //SavePrice();
+
         }
 
-        private void pivotGridControlPivot_CellSelectionChanged(object sender, EventArgs e)
+        private void SavePrice(int day, int price)
         {
-            
+            using (var ctx = new OracleDbContext(ORACLE.OracleConnectString))
+            {
+                using (var uow = new UnitOfWork(ctx))
+                {
+                    var fuelPrice = uow.Repository<FuelPrice>().FindBy(p => p.Day == day).FirstOrDefault();
+                    fuelPrice.Price = price;
+                    uow.Repository<FuelPrice>().Update(fuelPrice);
+                    uow.Commit();
+                    
+                    pivotGridControlPivot.DataSource = uow.Repository<Dept>().FindAll().ToList();
+                }
+            }
+
+            pivotGridControlPivot.RefreshDataAsync();
+        }
+
+
+        private void pivotGridControlPivot_CellClick(object sender, PivotCellEventArgs e)
+        {
+            //var aa = e.ColumnField.GetAvailableValues();
+
+            //var rowValue = e.cell.rowPath.join('.');
+            //var columnValue = e.cell.columnPath.join('.');
+
+
+        }
+
+        private void simpleButtonClose_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+            this.Dispose();
+        }
+
+        private void repositoryItemTextEdit1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pivotGridControlPivot_FocusedCellChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pivotGridControlPivot_MouseClick(object sender, MouseEventArgs e)
+        {
+            PivotGridHitInfo hi = pivotGridControlPivot.CalcHitInfo(e.Location);
+
+            if (hi.HitTest == PivotGridHitTest.Cell)
+            {
+                // Assuming you have row and column fields named 'rowField' and 'columnField'
+                var rowValue = hi.CellInfo.GetFieldValue(pivotGridFieldDayCode);
+                var columnValue = hi.CellInfo.GetFieldValue(pivotGridFieldDays);
+                var dataValue = hi.CellInfo.GetFieldValue(pivotGridFieldPrice);
+                MessageBox.Show(rowValue.ToString());
+                MessageBox.Show(columnValue.ToString());
+                MessageBox.Show(dataValue.ToString());
+
+                // Do something with the values
+                Console.WriteLine($"Row Value: {rowValue}, Column Value: {columnValue}, Price Value: {dataValue}");
+            }
         }
     }
 }

@@ -39,9 +39,9 @@
             this.simpleButtonExcel = new DevExpress.XtraEditors.SimpleButton();
             this.buttonRetrieve = new DevExpress.XtraEditors.SimpleButton();
             this.pivotGridControlPivot = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.pivotGridField1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.pivotGridField2 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.pivotGridField3 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.pivotGridFieldDayCode = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.pivotGridFieldDays = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.pivotGridFieldPrice = new DevExpress.XtraPivotGrid.PivotGridField();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -72,6 +72,7 @@
             this.simpleButtonClose.Size = new System.Drawing.Size(93, 36);
             this.simpleButtonClose.TabIndex = 15;
             this.simpleButtonClose.Text = "Close";
+            this.simpleButtonClose.Click += new System.EventHandler(this.simpleButtonClose_Click);
             // 
             // comboBoxEditSelection
             // 
@@ -121,9 +122,9 @@
             // 
             this.pivotGridControlPivot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControlPivot.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
-            this.pivotGridField1,
-            this.pivotGridField2,
-            this.pivotGridField3});
+            this.pivotGridFieldDayCode,
+            this.pivotGridFieldDays,
+            this.pivotGridFieldPrice});
             this.pivotGridControlPivot.Location = new System.Drawing.Point(0, 79);
             this.pivotGridControlPivot.Name = "pivotGridControlPivot";
             this.pivotGridControlPivot.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
@@ -131,43 +132,46 @@
             this.repositoryItemTextEdit1});
             this.pivotGridControlPivot.Size = new System.Drawing.Size(1066, 543);
             this.pivotGridControlPivot.TabIndex = 16;
-            this.pivotGridControlPivot.CellSelectionChanged += new System.EventHandler(this.pivotGridControlPivot_CellSelectionChanged);
+            this.pivotGridControlPivot.CellClick += new DevExpress.XtraPivotGrid.PivotCellEventHandler(this.pivotGridControlPivot_CellClick);
+            this.pivotGridControlPivot.FocusedCellChanged += new System.EventHandler(this.pivotGridControlPivot_FocusedCellChanged);
             this.pivotGridControlPivot.EditValueChanged += new DevExpress.XtraPivotGrid.EditValueChangedEventHandler(this.pivotGridControlPivot_EditValueChanged);
+            this.pivotGridControlPivot.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pivotGridControlPivot_MouseClick);
             // 
-            // pivotGridField1
+            // pivotGridFieldDayCode
             // 
-            this.pivotGridField1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.pivotGridField1.AreaIndex = 0;
-            this.pivotGridField1.Caption = "Day Code";
+            this.pivotGridFieldDayCode.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.pivotGridFieldDayCode.AreaIndex = 0;
+            this.pivotGridFieldDayCode.Caption = "Day Code";
             dataSourceColumnBinding1.ColumnName = "Day";
-            this.pivotGridField1.DataBinding = dataSourceColumnBinding1;
-            this.pivotGridField1.MinWidth = 50;
-            this.pivotGridField1.Name = "pivotGridField1";
-            this.pivotGridField1.Width = 150;
+            this.pivotGridFieldDayCode.DataBinding = dataSourceColumnBinding1;
+            this.pivotGridFieldDayCode.MinWidth = 50;
+            this.pivotGridFieldDayCode.Name = "pivotGridFieldDayCode";
+            this.pivotGridFieldDayCode.Width = 150;
             // 
-            // pivotGridField2
+            // pivotGridFieldDays
             // 
-            this.pivotGridField2.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
-            this.pivotGridField2.AreaIndex = 0;
-            this.pivotGridField2.Caption = "Days";
+            this.pivotGridFieldDays.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.pivotGridFieldDays.AreaIndex = 0;
+            this.pivotGridFieldDays.Caption = "Days";
             dataSourceColumnBinding2.ColumnName = "Days";
-            this.pivotGridField2.DataBinding = dataSourceColumnBinding2;
-            this.pivotGridField2.Name = "pivotGridField2";
+            this.pivotGridFieldDays.DataBinding = dataSourceColumnBinding2;
+            this.pivotGridFieldDays.Name = "pivotGridFieldDays";
             // 
-            // pivotGridField3
+            // pivotGridFieldPrice
             // 
-            this.pivotGridField3.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.pivotGridField3.AreaIndex = 0;
-            this.pivotGridField3.Caption = "Price";
+            this.pivotGridFieldPrice.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.pivotGridFieldPrice.AreaIndex = 0;
+            this.pivotGridFieldPrice.Caption = "Price";
             dataSourceColumnBinding3.ColumnName = "Price";
-            this.pivotGridField3.DataBinding = dataSourceColumnBinding3;
-            this.pivotGridField3.FieldEdit = this.repositoryItemTextEdit1;
-            this.pivotGridField3.Name = "pivotGridField3";
+            this.pivotGridFieldPrice.DataBinding = dataSourceColumnBinding3;
+            this.pivotGridFieldPrice.FieldEdit = this.repositoryItemTextEdit1;
+            this.pivotGridFieldPrice.Name = "pivotGridFieldPrice";
             // 
             // repositoryItemTextEdit1
             // 
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            this.repositoryItemTextEdit1.Click += new System.EventHandler(this.repositoryItemTextEdit1_Click);
             // 
             // ucFuelPrice
             // 
@@ -197,9 +201,9 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonExcel;
         private DevExpress.XtraEditors.SimpleButton buttonRetrieve;
         private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControlPivot;
-        private DevExpress.XtraPivotGrid.PivotGridField pivotGridField1;
-        private DevExpress.XtraPivotGrid.PivotGridField pivotGridField2;
-        private DevExpress.XtraPivotGrid.PivotGridField pivotGridField3;
+        private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldDayCode;
+        private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldDays;
+        private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldPrice;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
     }
 }

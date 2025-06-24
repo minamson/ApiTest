@@ -151,6 +151,12 @@
     <Compile Include="CustomForms\baseUserControl.Designer.cs">
       <DependentUpon>baseUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomForms\frmMakeApi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomForms\frmMakeApi.Designer.cs">
+      <DependentUpon>frmMakeApi.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomForms\ucEmp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,11 +169,23 @@
     <Compile Include="CustomForms\ucFuelPrice.Designer.cs">
       <DependentUpon>ucFuelPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomForms\ucPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomForms\ucPrint.Designer.cs">
+      <DependentUpon>ucPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomForms\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomForms\WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomForms\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomForms\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdmMain.cs">
       <SubType>Form</SubType>
@@ -199,14 +217,23 @@
     <EmbeddedResource Include="CustomForms\baseUserControl.resx">
       <DependentUpon>baseUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\frmMakeApi.resx">
+      <DependentUpon>frmMakeApi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomForms\ucEmp.resx">
       <DependentUpon>ucEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomForms\ucFuelPrice.resx">
       <DependentUpon>ucFuelPrice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\ucPrint.resx">
+      <DependentUpon>ucPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomForms\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmMain.resx">
       <DependentUpon>frmAdmMain.cs</DependentUpon>
