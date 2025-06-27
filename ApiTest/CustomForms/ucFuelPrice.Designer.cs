@@ -132,10 +132,8 @@
             this.repositoryItemTextEdit1});
             this.pivotGridControlPivot.Size = new System.Drawing.Size(1066, 543);
             this.pivotGridControlPivot.TabIndex = 16;
-            this.pivotGridControlPivot.CellClick += new DevExpress.XtraPivotGrid.PivotCellEventHandler(this.pivotGridControlPivot_CellClick);
-            this.pivotGridControlPivot.FocusedCellChanged += new System.EventHandler(this.pivotGridControlPivot_FocusedCellChanged);
             this.pivotGridControlPivot.EditValueChanged += new DevExpress.XtraPivotGrid.EditValueChangedEventHandler(this.pivotGridControlPivot_EditValueChanged);
-            this.pivotGridControlPivot.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pivotGridControlPivot_MouseClick);
+            this.pivotGridControlPivot.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pivotGridControlPivot_MouseDown);
             // 
             // pivotGridFieldDayCode
             // 
@@ -171,7 +169,6 @@
             // 
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            this.repositoryItemTextEdit1.Click += new System.EventHandler(this.repositoryItemTextEdit1_Click);
             // 
             // ucFuelPrice
             // 

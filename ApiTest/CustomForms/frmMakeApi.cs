@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraRichEdit;
 
 namespace ApiTest.CustomForms
 {
@@ -19,6 +20,7 @@ namespace ApiTest.CustomForms
         {
             InitializeComponent();
             this.items = items;
+
         }
 
 

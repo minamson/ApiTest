@@ -100,6 +100,7 @@
             this.textEditName.Properties.Appearance.Options.UseFont = true;
             this.textEditName.Size = new System.Drawing.Size(151, 24);
             this.textEditName.TabIndex = 9;
+            this.textEditName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEditName_KeyDown);
             // 
             // gridViewSchemInfo
             // 

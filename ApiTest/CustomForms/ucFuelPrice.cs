@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using DataAccess;
 using DataAccess.Entity;
 using DataAccess.UnitOfWork;
-using DevExpress.XtraGrid.Views.BandedGrid;
 using DevExpress.XtraPivotGrid;
 
 namespace ApiTest.CustomForms
@@ -90,33 +89,19 @@ namespace ApiTest.CustomForms
         }
 
 
-        private void pivotGridControlPivot_CellClick(object sender, PivotCellEventArgs e)
-        {
-            //var aa = e.ColumnField.GetAvailableValues();
-
-            //var rowValue = e.cell.rowPath.join('.');
-            //var columnValue = e.cell.columnPath.join('.');
-
-
-        }
-
         private void simpleButtonClose_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
             this.Dispose();
         }
 
-        private void repositoryItemTextEdit1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pivotGridControlPivot_FocusedCellChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void pivotGridControlPivot_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pivotGridControlPivot_MouseDown(object sender, MouseEventArgs e)
         {
             PivotGridHitInfo hi = pivotGridControlPivot.CalcHitInfo(e.Location);
 

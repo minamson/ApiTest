@@ -128,5 +128,12 @@ namespace ApiTest.CustomForms
             this.Dispose();
         }
 
+        private void textEditName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                buttonRetrieve_Click(sender, e);
+            }
+        }
     }
 }
