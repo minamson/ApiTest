@@ -127,6 +127,7 @@
             this.gridViewSchemInfo.OptionsSelection.InvertSelection = true;
             this.gridViewSchemInfo.OptionsSelection.MultiSelect = true;
             this.gridViewSchemInfo.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridViewSchemInfo.OptionsView.AllowCellMerge = true;
             this.gridViewSchemInfo.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumnKind, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumnTableName, DevExpress.Data.ColumnSortOrder.Ascending)});
@@ -138,7 +139,7 @@
             this.gridColumnID.Name = "gridColumnID";
             this.gridColumnID.OptionsColumn.FixedWidth = true;
             this.gridColumnID.Visible = true;
-            this.gridColumnID.VisibleIndex = 1;
+            this.gridColumnID.VisibleIndex = 0;
             this.gridColumnID.Width = 45;
             // 
             // gridColumnTableName
@@ -146,6 +147,7 @@
             this.gridColumnTableName.Caption = "Table Name";
             this.gridColumnTableName.FieldName = "TABLE_NAME";
             this.gridColumnTableName.Name = "gridColumnTableName";
+            this.gridColumnTableName.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumnTableName.Visible = true;
             this.gridColumnTableName.VisibleIndex = 2;
             this.gridColumnTableName.Width = 191;
@@ -156,7 +158,7 @@
             this.gridColumnTABLE_COMMENT.FieldName = "TABLE_COMMENT";
             this.gridColumnTABLE_COMMENT.Name = "gridColumnTABLE_COMMENT";
             this.gridColumnTABLE_COMMENT.Visible = true;
-            this.gridColumnTABLE_COMMENT.VisibleIndex = 2;
+            this.gridColumnTABLE_COMMENT.VisibleIndex = 1;
             this.gridColumnTABLE_COMMENT.Width = 116;
             // 
             // gridColumnKind
@@ -174,7 +176,7 @@
             this.gridColumnColumnId.Name = "gridColumnColumnId";
             this.gridColumnColumnId.OptionsColumn.FixedWidth = true;
             this.gridColumnColumnId.Visible = true;
-            this.gridColumnColumnId.VisibleIndex = 3;
+            this.gridColumnColumnId.VisibleIndex = 2;
             this.gridColumnColumnId.Width = 60;
             // 
             // gridColumnColomnName
@@ -183,7 +185,7 @@
             this.gridColumnColomnName.FieldName = "COLUMN_NAME";
             this.gridColumnColomnName.Name = "gridColumnColomnName";
             this.gridColumnColomnName.Visible = true;
-            this.gridColumnColomnName.VisibleIndex = 4;
+            this.gridColumnColomnName.VisibleIndex = 3;
             this.gridColumnColomnName.Width = 242;
             // 
             // gridColumnComments
@@ -192,7 +194,7 @@
             this.gridColumnComments.FieldName = "COMMENTS";
             this.gridColumnComments.Name = "gridColumnComments";
             this.gridColumnComments.Visible = true;
-            this.gridColumnComments.VisibleIndex = 5;
+            this.gridColumnComments.VisibleIndex = 4;
             this.gridColumnComments.Width = 297;
             // 
             // gridColumnDataType
@@ -201,7 +203,7 @@
             this.gridColumnDataType.FieldName = "DATA_TYPE";
             this.gridColumnDataType.Name = "gridColumnDataType";
             this.gridColumnDataType.Visible = true;
-            this.gridColumnDataType.VisibleIndex = 6;
+            this.gridColumnDataType.VisibleIndex = 5;
             this.gridColumnDataType.Width = 322;
             // 
             // gridColumnDataDefault
@@ -212,7 +214,7 @@
             this.gridColumnDataDefault.FieldName = "DATA_DEFAULT";
             this.gridColumnDataDefault.Name = "gridColumnDataDefault";
             this.gridColumnDataDefault.Visible = true;
-            this.gridColumnDataDefault.VisibleIndex = 7;
+            this.gridColumnDataDefault.VisibleIndex = 6;
             this.gridColumnDataDefault.Width = 107;
             // 
             // gridColumnIsNull
@@ -222,7 +224,7 @@
             this.gridColumnIsNull.Name = "gridColumnIsNull";
             this.gridColumnIsNull.OptionsColumn.FixedWidth = true;
             this.gridColumnIsNull.Visible = true;
-            this.gridColumnIsNull.VisibleIndex = 8;
+            this.gridColumnIsNull.VisibleIndex = 7;
             this.gridColumnIsNull.Width = 100;
             // 
             // gridColumnPK
@@ -232,7 +234,7 @@
             this.gridColumnPK.Name = "gridColumnPK";
             this.gridColumnPK.OptionsColumn.FixedWidth = true;
             this.gridColumnPK.Visible = true;
-            this.gridColumnPK.VisibleIndex = 9;
+            this.gridColumnPK.VisibleIndex = 8;
             this.gridColumnPK.Width = 44;
             // 
             // gridColumnFK
@@ -242,7 +244,7 @@
             this.gridColumnFK.Name = "gridColumnFK";
             this.gridColumnFK.OptionsColumn.FixedWidth = true;
             this.gridColumnFK.Visible = true;
-            this.gridColumnFK.VisibleIndex = 10;
+            this.gridColumnFK.VisibleIndex = 9;
             this.gridColumnFK.Width = 39;
             // 
             // gridColumnUQ
@@ -252,7 +254,7 @@
             this.gridColumnUQ.Name = "gridColumnUQ";
             this.gridColumnUQ.OptionsColumn.FixedWidth = true;
             this.gridColumnUQ.Visible = true;
-            this.gridColumnUQ.VisibleIndex = 11;
+            this.gridColumnUQ.VisibleIndex = 10;
             this.gridColumnUQ.Width = 50;
             // 
             // gridControlSchemInfo
@@ -264,7 +266,7 @@
             this.gridControlSchemInfo.Location = new System.Drawing.Point(3, 85);
             this.gridControlSchemInfo.MainView = this.gridViewSchemInfo;
             this.gridControlSchemInfo.Name = "gridControlSchemInfo";
-            this.gridControlSchemInfo.Size = new System.Drawing.Size(1493, 567);
+            this.gridControlSchemInfo.Size = new System.Drawing.Size(1065, 478);
             this.gridControlSchemInfo.TabIndex = 8;
             this.gridControlSchemInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSchemInfo});
@@ -278,13 +280,13 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1499, 79);
+            this.groupControl1.Size = new System.Drawing.Size(1071, 79);
             this.groupControl1.TabIndex = 13;
             // 
             // simpleButtonClose
             // 
             this.simpleButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonClose.Location = new System.Drawing.Point(1391, 38);
+            this.simpleButtonClose.Location = new System.Drawing.Point(963, 38);
             this.simpleButtonClose.Name = "simpleButtonClose";
             this.simpleButtonClose.Size = new System.Drawing.Size(93, 36);
             this.simpleButtonClose.TabIndex = 11;
@@ -295,7 +297,7 @@
             // 
             this.simpleButtonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButtonExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonExcel.ImageOptions.Image")));
-            this.simpleButtonExcel.Location = new System.Drawing.Point(1258, 38);
+            this.simpleButtonExcel.Location = new System.Drawing.Point(830, 38);
             this.simpleButtonExcel.Name = "simpleButtonExcel";
             this.simpleButtonExcel.Size = new System.Drawing.Size(127, 36);
             this.simpleButtonExcel.TabIndex = 10;
@@ -305,7 +307,7 @@
             // buttonRetrieve
             // 
             this.buttonRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRetrieve.Location = new System.Drawing.Point(1103, 38);
+            this.buttonRetrieve.Location = new System.Drawing.Point(675, 38);
             this.buttonRetrieve.Name = "buttonRetrieve";
             this.buttonRetrieve.Size = new System.Drawing.Size(149, 36);
             this.buttonRetrieve.TabIndex = 10;
@@ -321,7 +323,7 @@
             this.Controls.Add(this.gridControlSchemInfo);
             this.Controls.Add(this.groupControl1);
             this.Name = "ucSchemInfo";
-            this.Size = new System.Drawing.Size(1499, 655);
+            this.Size = new System.Drawing.Size(1071, 566);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditSelection.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditQryOption.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
